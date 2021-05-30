@@ -1,0 +1,220 @@
+{
+  "class": {
+    "description": "Vijay class definition",
+    "prefix": ["vclass"],
+    "body": [
+      "//$1",
+      "class $1 {",
+      "\t$0",
+      "}//$1"
+    ]
+  },
+  "function": {
+    "description": "Vijay arrow function declaration",
+    "prefix": ["vfunction"],
+    "body": [
+      "//$1",
+      "const $1 = async ($2) => {",
+      "\t$0",
+      "};//$1"
+    ]
+  },
+  "method": {
+    "description": "Vijay class method",
+    "prefix": ["vmethod"],
+    "body": [
+      "//$1",
+      "async $1($2) {",
+      "\t$0",
+      "}//$1"
+    ]
+  },
+  "getter": {
+    "description": "Vijay class getter",
+    "prefix": ["vget"],
+    "body": [
+      "get $1() {$0}"
+    ]
+  },
+  "setter": {
+    "description": "Vijay class setter",
+    "prefix": ["vset"],
+    "body": [
+      "set $1(${2:value}) {$0}"
+    ]
+  },
+  "if": {
+    "description": "Vijay if statement",
+    "prefix": ["vif"],
+    "body": [
+      "if(${1:condition}) {",
+      "\t$0",
+      "}//if"
+    ]
+  },
+  "switch": {
+    "description": "Vijay switch",
+    "prefix": ["vswitch"],
+    "body": [
+      "switch($1) {",
+      "case $2: $0",
+      "default:",
+      "}//switch"
+    ]
+  },
+  "try..catch": {
+    "description": "Vijay try..catch",
+    "prefix": ["vtry"],
+    "body": [
+      "try {",
+      "\t$0",
+      "} catch(err) {",
+      "\tlog.error('Failed to $1!(err=', err, ')');",
+      "\tthrow error.catch(err, 'failed to $1');",
+      "}//catch"
+    ]
+  },
+  "while": {
+    "description": "Vijay while loop",
+    "prefix": ["vwhile"],
+    "body": [
+      "while($1) {",
+      "\t$0",
+      "}//while"
+    ]
+  },
+  "do..while": {
+    "description": "Vijay do..while loop",
+    "prefix": ["vdo"],
+    "body": [
+      "do {",
+      "\t$0",
+      "} while($1);"
+    ]
+  },
+  "for 0..n": {
+    "description": "Vijay for..i++ loop",
+    "prefix": ["vfor"],
+    "body": [
+      "for(let i = 0; i < ${1:arr}.length; i++) {",
+      "\t$0",
+      "}//for"
+    ]
+  },
+  "for n..0": {
+    "description": "Vijay for..i-- loop",
+    "prefix": ["vforb"],
+    "body": [
+      "for(let i = ${1:arr}.length-1; i >= 0; i--) {",
+      "\t$0",
+      "}//for"
+    ]
+  },
+  "for..of": {
+    "description": "Vijay for..of loop",
+    "prefix": ["vforof"],
+    "body": [
+      "for(let ${1:item} of ${2:arr}) {",
+      "\t$0",
+      "}//for"
+    ]
+  },
+  "for..in": {
+    "description": "Vijay for..in loop",
+    "prefix": ["vforin"],
+    "body": [
+      "for(let ${1:key} in ${2:obj}) {",
+      "\t$0",
+      "}//for"
+    ]
+  },
+  "forEach": {
+    "description": "Vijay .forEach",
+    "prefix": ["vforeach"],
+    "body": [
+      "forEach(${1:item} => {",
+      "\t$0",
+      "});//forEach"
+    ]
+  },
+  "module.exports": {
+    "description": "CommonJS export",
+    "prefix": ["vexport"],
+    "body": [
+      "//$1",
+      "module.exports.$1 = $2{",
+      "\t$0",
+      "};//$1"
+    ]
+  },
+  "exports.handler": {
+    "description": "lambda handler",
+    "prefix": ["vhandler"],
+    "body": [
+      "'use strict';",
+      "",
+      "const request = require('common/request');",
+      "const log = require('common/log');",
+      "const error = require('common/error');",
+      "const success = require('common/success');",
+      "",
+      "//handler",
+      "exports.handler = async (event, context) => {",
+      "\tlog.debug('Event:[', event, '] Context:[', context, ']');",
+      "\ttry {",
+      "\t\trequest.init(event, context);",
+      "\t\t$0",
+      "\t\treturn (new success.success());",
+      "\t} catch(err) {",
+      "\t\tlog.error('Failed!(err=', err, ')');",
+      "\t\tthrow(error.catch(err, 'failed'));",
+      "\t}//catch",
+      "};//handler"
+    ]
+  },
+  "providerRequest": {
+    "description": "provider request method",
+    "prefix": ["vrequest"],
+    "body": [
+      "//$1Request",
+      "async $1Request(opts, callback) {",
+      "\tlog.debug('${1/(^.)/\\u$1/} request with Options:[', opts, ']');",
+      "\ttry {",
+      "\t\t//initiate $1 request",
+      "\t\tlet handler = (await this.request('$1').catch(err => {",
+      "\t\t\tlog.error('Failed to get $1 request for Provider:[', this.name, ']!(err=', err, ')');",
+      "\t\t\tthrow(error.catch(err, 'failed to get $1 request'));",
+      "\t\t}));",
+      "\t\tlet params = opts;",
+      "\t\tlog.debug('Calling $1 with Params:[', params, '] for Provider:[', this.name, ']');",
+      "\t\tlet response = handler.request(params);",
+      "\t\tif(callback) return callback(null, response); else return(response);",
+      "\t} catch(err) {",
+      "\t\tif(callback) return callback(err); else throw(err);",
+      "\t}//catch",
+      "}//$1Request"
+    ]
+  },
+  "providerRequestPromise": {
+    "description": "provider request method with Promise",
+    "prefix": ["vrequestp"],
+    "body": [
+      "//$1Request",
+      "$1Request(opts, callback) {",
+      "\tlog.debug('${1/(^.)/\\u$1/} request with Options:[', opts, ']');",
+      "\treturn new Promise((resolve, reject) => {",
+      "\t\t//initiate $1 request",
+      "\t\tthis.request('$1').then(handler => {",
+      "\t\t\tlet params = opts;",
+      "\t\t\tlog.debug('Calling $1 with Params:[', params, '] for Provider:[', this.name, ']');",
+      "\t\t\tif(callback) callback(null, handler.request(params)); else resolve(handler.request(params));",
+      "\t\t}).catch(err => {",
+      "\t\t\tlog.error('Failed to get $1 request for Provider:[', this.name, ']!(err=', err, ')');",
+      "\t\t\terr = error.catch(err, 'failed to get $1 request');",
+      "\t\t\tif(callback) callback(err); else reject(err);",
+      "\t\t});",
+      "\t});//Promise",
+      "}//$1Request"
+    ]
+  }
+}

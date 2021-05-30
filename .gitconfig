@@ -1,0 +1,3 @@
+[core]
+	excludesfile = ~/.gitignore
+	pager = less -+FX
