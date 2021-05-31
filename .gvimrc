@@ -33,4 +33,3 @@ if has('gui_macvim') && has('gui_running')
 	macmenu Edit.Font.Smaller key=<Nop>
 	macmenu File.Close key=<Nop>
 endif
-

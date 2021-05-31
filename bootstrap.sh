@@ -1,7 +1,8 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
+
+script="$0:A"
 
 bootstrap() {
-	script="$0:A"
 	for f in $(git ls-files); do
 		src="$f:A"
 		dst="$HOME/$f"
@@ -20,4 +21,3 @@ bootstrap() {
 }
 
 bootstrap
-
