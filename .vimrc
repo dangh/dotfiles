@@ -310,7 +310,7 @@ endif
 
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_match_window='order:ttb'
-let g:ctrlp_use_caching = 0
+let g:ctrlp_use_caching=0
 Plug 'dangh/ctrlp-funky'
 let g:ctrlp_funky_matchtype='path'
 let g:ctrlp_funky_syntax_highlight=1
@@ -318,6 +318,26 @@ let g:ctrlp_funky_after_jump = 'zozt'
 let g:ctrlp_funky_nolim=1
 noremap <D-r> :CtrlPFunky<CR>
 nnoremap <F12> :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
+
+Plug 'easymotion/vim-easymotion'
+let g:EasyMotion_smartcase=1
+let g:EasyMotion_use_smartsign_us=1
+nmap s <Plug>(easymotion-overwin-f2)
+
+
+Plug 'haya14busa/incsearch.vim'
+let g:incsearch#auto_nohlsearch=1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+Plug 'haya14busa/incsearch-easymotion.vim'
+map / <Plug>(incsearch-easymotion-/)
+map ? <Plug>(incsearch-easymotion-?)
+map g/ <Plug>(incsearch-easymotion-stay)
 
 
 let g:fthook={}
@@ -390,10 +410,6 @@ inoremap <silent> <C-D-down> <Esc>:move .+1<CR>==gi
 vnoremap <silent> <C-D-up>        :move '<-2<CR>gv=gv
 vnoremap <silent> <C-D-down>      :move '>+1<CR>gv=gv
 
-"search
-noremap  <D-f>      /
-noremap! <D-f> <Esc>/
-
 "open terminal at current file directory
 noremap  <silent> <D-R>      :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
 noremap! <silent> <D-R> <Esc>:let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
@@ -416,10 +432,6 @@ noremap <expr> k v:count ? 'k' : 'gk'
 noremap <expr> $ v:count ? '$' : 'g$'
 noremap <expr> ^ v:count ? '^' : 'g^'
 noremap <expr> 0 v:count ? '0' : 'g0'
-
-"search in visible buffer
-"https://www.reddit.com/r/vim/comments/91g97i/search_in_the_current_screen_only/
-nnoremap <silent> \ :set scrolloff=0<CR>VHoL<Esc>:set scrolloff=1<CR>``<C-y>/\%V
 
 "make * # case-sensitive
 "https://vi.stackexchange.com/a/4055
