@@ -25,6 +25,7 @@ if has('gui_macvim') && has('gui_running')
 	"disable MacVim menu shortcuts
 	macmenu File.New\ Window key=<Nop>
 	macmenu File.New\ Tab key=<Nop>
+	macmenu File.Open\ Tab\.\.\. key=<Nop>
 	macmenu File.Print key=<Nop>
 	macmenu Tools.Older\ List key=<Nop>
 	macmenu Tools.Newer\ List key=<Nop>

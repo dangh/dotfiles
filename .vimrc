@@ -420,6 +420,9 @@ noremap  <D-\|>      :vnew<CR>
 noremap! <D-_>  <Esc>:new<CR>
 noremap! <D-\|> <Esc>:vnew<CR>
 
+noremap  <D-n>      :tabnew<CR>
+noremap! <D-n> <Esc>:tabnew<CR>
+
 "}}}
 
 
