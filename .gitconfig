@@ -1,3 +1,5 @@
 [core]
 	excludesfile = ~/.gitignore
 	pager = less -+FX
+[pull]
+	rebase = true
