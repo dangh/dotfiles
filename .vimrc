@@ -324,6 +324,12 @@ Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_smartcase=1
 let g:EasyMotion_use_smartsign_us=1
 nmap s <Plug>(easymotion-overwin-f2)
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+map  <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
 
 
 Plug 'haya14busa/incsearch.vim'
