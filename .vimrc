@@ -162,7 +162,9 @@ set formatoptions-=c "disable hard wrapping comment
 set scrolloff=5 "always show 3 lines of context when scrolling
 set mouse=a "enable mouse in all modes so we can scroll inside tmux
 set fillchars+=vert:│ "better split border
-set fillchars+=eob:\ , "hide tildes
+if has('patch2508')
+	set fillchars+=eob:\ , "hide tildes
+endif
 "set wildignore+=*/web/*
 "set wildignore+=*.jpg,*.png,*.gif,*.webp,*.tgz
 set wrap "enable softwrap
@@ -364,6 +366,7 @@ endfunction
 function! g:fthook.help(_)
 	wincmd L
 	vertical resize 80
+	setlocal list listchars+=tab:\ \  "hide tabs but allow cursor moving to first col
 endfunction
 function! g:fthook.javascript(_)
 	setlocal foldmethod=syntax foldnestmax=1
@@ -438,6 +441,10 @@ noremap! <D-\|> <Esc>:vnew<CR>
 noremap  <D-n>      :tabnew<CR>
 noremap! <D-n> <Esc>:tabnew<CR>
 
+"insert line before/after
+noremap   <D-CR> o
+noremap <S-D-CR> O
+
 "}}}
 
 
@@ -457,5 +464,8 @@ nnoremap <silent>  * :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchf
 nnoremap <silent>  # :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchforward=0<CR>n
 nnoremap <silent> g* :let @/='\C'   . expand('<cword>')       <CR>:let v:searchforward=1<CR>n
 nnoremap <silent> g# :let @/='\C'   . expand('<cword>')       <CR>:let v:searchforward=0<CR>n
+
+"move to first non-whitespace character on the previous line as oppose to <CR>
+nnoremap <S-CR> -
 
 "}}}
