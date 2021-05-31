@@ -246,6 +246,15 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 let g:lsp_diagnostics_enabled=0
 let g:lsp_document_highlight_enabled=0
+augroup lsp_config
+	autocmd!
+	autocmd User lsp_float_opened
+				\ call popup_setoptions(lsp#ui#vim#output#getpreviewwinid(), {
+				\ 	'borderchars': ['─', '│', '─', '│', '┌', '┐', '┘', '└'],
+				\ 	'padding': [0,1,0,1],
+				\ 	'highlight': 'Constant',
+				\ })
+augroup END
 
 
 Plug 'sainnhe/everforest'
