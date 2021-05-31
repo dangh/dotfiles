@@ -272,6 +272,14 @@ else
 	set nocursorline
 endif
 colorscheme everforest
+highlight! link jsFuncCall Purple
+highlight! link jsString GreenItalic
+highlight! link jsBlock Blue
+highlight! link jsFuncBlock Blue
+highlight! link jsTryCatchBlock Blue
+highlight! link jsSwitchBlock Blue
+highlight! link jsIfElseBlock Blue
+highlight! link jsRepeatBlock Blue
 
 
 let g:lightline={'colorscheme': 'everforest'}
@@ -467,5 +475,12 @@ nnoremap <silent> g# :let @/='\C'   . expand('<cword>')       <CR>:let v:searchf
 
 "move to first non-whitespace character on the previous line as oppose to <CR>
 nnoremap <S-CR> -
+
+"inspect syntax highlight group
+function! SynGroup()                                                            
+	let l:s = synID(line('.'), col('.'), 1)                                       
+	echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
+nnoremap <C-P> :call SynGroup()<CR>
 
 "}}}
