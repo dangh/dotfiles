@@ -1,5 +1,8 @@
 [core]
 	excludesfile = ~/.gitignore
 	pager = less -+FX
+	autocrlf = input
+	eol = lf
+	attributesfile = ~/.gitattributes
 [pull]
 	rebase = true
