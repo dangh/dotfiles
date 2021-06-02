@@ -449,9 +449,11 @@ noremap! <D-\|> <Esc>:vnew<CR>
 noremap  <D-n>      :tabnew<CR>
 noremap! <D-n> <Esc>:tabnew<CR>
 
-"insert line before/after
-noremap   <D-CR> o
-noremap <S-D-CR> O
+"insert line above/below
+noremap    <D-CR> o
+noremap  <S-D-CR> O
+noremap!   <D-CR> <Esc>o
+noremap! <S-D-CR> <Esc>O
 
 "}}}
 
