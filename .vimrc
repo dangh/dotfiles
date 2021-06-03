@@ -180,6 +180,7 @@ endif
 set wrap "enable softwrap
 set breakindent "indent wrapped line at the same level
 set sessionoptions=tabpages "only save open files and cwd
+set titlestring=%{substitute(getcwd(),\ $HOME,\ '〜',\ '')}
 
 "}}} general config
 
