@@ -350,7 +350,7 @@ Plug 'itchyny/lightline.vim'
 
 if executable('fd') && executable('fzy')
 	let g:fzy={
-				\'findcmd': 'fd -cnever -d5 -tf -ejs -ejson -eyml -emd -evue',
+				\'findcmd': 'fd -cnever --max-results=5000 -tf -ejs -ejson -eyml -emd -evue',
 				\'lines': 20,
 				\'popupwin': 1,
 				\'term_highlight': 'Conceal',
