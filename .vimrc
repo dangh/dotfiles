@@ -533,8 +533,8 @@ nnoremap <silent> g# :let @/='\C'   . expand('<cword>')       <CR>:let v:searchf
 nnoremap <S-CR> -
 
 "inspect syntax highlight group
-function! SynGroup()                                                            
-	let l:s = synID(line('.'), col('.'), 1)                                       
+function! SynGroup()
+	let l:s = synID(line('.'), col('.'), 1)
 	echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
 endfun
 nnoremap <C-P> :call SynGroup()<CR>
