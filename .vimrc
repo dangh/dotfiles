@@ -466,6 +466,7 @@ let macvim_hig_shift_movement=1
 for c in [1, 2, 3, 4, 5, 6, 7, 8, 9]
 	execute 'noremap <D-'.c.'> '.c.'gt'
 	execute 'noremap! <D-'.c.'> <Esc>'.c.'gt'
+	execute 'noremap <Leader>'.c.' '.c.'gt'
 endfor
 noremap <D-0> :tablast<CR>
 noremap! <D-0> <Esc>:tablast<CR>
