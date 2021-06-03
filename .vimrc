@@ -329,7 +329,6 @@ let g:lightline.inactive.left=[[], [ 'relativepath' ]]
 let g:lightline.tabline.right=[[ 'pwd' ]]
 let g:lightline.component_function.pwd='LightlinePwd'
 let g:lightline.component_function.relativepath='LightlineRelativePath'
-call add(g:lightline#colorscheme#everforest#palette.tabline.right[0], 'bold')
 function! LightlinePwd()
 	return fnamemodify(getcwd(), ':t')
 endfunction
@@ -346,6 +345,7 @@ function! LightlineRelativePath()
 	return expand('%')
 endfunction
 Plug 'itchyny/lightline.vim'
+call add(g:lightline#colorscheme#everforest#palette.tabline.right[0], 'bold')
 
 
 if executable('fd') && executable('fzy')
