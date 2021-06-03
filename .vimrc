@@ -477,13 +477,13 @@ nnoremap <silent> <D-D>      mx:copy .<CR>`xj
 inoremap <silent> <D-D> <Esc>mx:copy .<CR>`xja
 vnoremap <silent> <D-D>        :copy '<-1<CR>gv
 
-"move line up-down with Ctrl+Cmd+Up/Down
-nnoremap <silent> <C-D-up>      mx:move .-2<CR>==`x
-nnoremap <silent> <C-D-down>    mx:move .+1<CR>==`x
-inoremap <silent> <C-D-up>   <Esc>:move .-2<CR>==gi
-inoremap <silent> <C-D-down> <Esc>:move .+1<CR>==gi
-vnoremap <silent> <C-D-up>        :move '<-2<CR>gv=gv
-vnoremap <silent> <C-D-down>      :move '>+1<CR>gv=gv
+"move line up-down with Alt+j/k
+nnoremap <silent> <M-k>    mx:move .-2<CR>==`x
+nnoremap <silent> <M-j>    mx:move .+1<CR>==`x
+inoremap <silent> <M-k> <Esc>:move .-2<CR>==gi
+inoremap <silent> <M-j> <Esc>:move .+1<CR>==gi
+vnoremap <silent> <M-k>      :move '<-2<CR>gv=gv
+vnoremap <silent> <M-j>      :move '>+1<CR>gv=gv
 
 "open terminal at current file directory
 noremap  <silent> <D-R>      :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>

@@ -20,6 +20,7 @@ if has('gui_macvim') && has('gui_running')
 	set fullscreen
 	set macligatures
 	set macthinstrokes
+	set macmeta
 
 	"disable MacVim menu shortcuts
 	macmenu File.New\ Window key=<Nop>
