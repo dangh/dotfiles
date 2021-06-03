@@ -492,9 +492,16 @@ noremap  <D-_>       :new<CR>
 noremap  <D-\|>      :vnew<CR>
 noremap! <D-_>  <Esc>:new<CR>
 noremap! <D-\|> <Esc>:vnew<CR>
-
 noremap  <D-n>      :tabnew<CR>
 noremap! <D-n> <Esc>:tabnew<CR>
+if exists(':FzyFind')
+	noremap  <D-_>       :new<CR>:FzyFind<CR>
+	noremap  <D-\|>      :vnew<CR>:FzyFind<CR>
+	noremap! <D-_>  <Esc>:new<CR>:FzyFind<CR>
+	noremap! <D-\|> <Esc>:vnew<CR>:FzyFind<CR>
+	noremap  <D-n>      :tabnew<CR>:FzyFind<CR>
+	noremap! <D-n> <Esc>:tabnew<CR>:FzyFind<CR>
+endif
 
 "insert line above/below
 noremap    <D-CR> o
