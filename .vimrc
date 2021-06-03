@@ -82,9 +82,19 @@ command! -nargs=* PlugUpdate :call PlugUpdate(<args>)
 "AutoPlug }}}
 
 "VIMRC {{{
+if !exists('*ReSourceVimrc')
+	function ReSourceVimrc()
+		source $MYVIMRC
+		if exists('*lightline#init')
+			call lightline#init()
+			call lightline#colorscheme()
+			call lightline#update()
+		endif
+	endfunction
+endif
 augroup auto_source_vimrc_on_save
 	autocmd!
-	autocmd BufWritePost .vimrc source %
+	autocmd BufWritePost .vimrc call ReSourceVimrc()
 	autocmd BufWritePost .gvimrc source %
 augroup END
 noremap <silent> <expr> <F10>
@@ -282,12 +292,48 @@ highlight! link jsIfElseBlock Blue
 highlight! link jsRepeatBlock Blue
 
 
-let g:lightline={'colorscheme': 'everforest'}
-let g:lightline.tabline={'right': []} "remove close button
-let g:lightline.component_function={'filename':'RelativeFilename'}
-function! RelativeFilename()
+let g:lightline={
+			\'active': {},
+			\'inactive': {},
+			\'tabline': {},
+			\'component_function': {},
+			\'component_expand': {},
+			\'component_type': {},
+			\'separator': {},
+			\'subseparator': {},
+			\'tabline_separator': {},
+			\'tabline_subseparator': {},
+			\}
+let g:lightline.colorscheme='everforest'
+let g:lightline_style='slant'
+let g:lightline_separators={
+			\'slant': [ "\ue0b8", "\ue0b9", "\ue0bb" , "\ue0ba", "\ue0bc", "\ue0bd", "\ue0bf", "\ue0be" ],
+			\'arrow': [ "\ue0b0", "\ue0b1", "\ue0b3" , "\ue0b2" ],
+			\'curve': [ "\ue0b4", "\ue0b5", "\ue0b7" , "\ue0b6" ],
+			\}
+if has_key(g:lightline_separators, get(g:, 'lightline_style', ''))
+	let symbols = g:lightline_separators[g:lightline_style]
+	let g:lightline.separator = { 'left': symbols[0], 'right': symbols[3] }
+	let g:lightline.subseparator = { 'left': symbols[1], 'right': symbols[2] }
+	if len(symbols) > 4
+		let g:lightline.tabline_separator = { 'left': symbols[4], 'right': symbols[7] }
+		let g:lightline.tabline_subseparator = { 'left': symbols[5], 'right': symbols[6] }
+	else
+		let g:lightline.tabline_separator = { 'left': symbols[0], 'right': symbols[3] }
+		let g:lightline.tabline_subseparator = { 'left': symbols[1], 'right': symbols[2] }
+	endif
+endif
+let g:lightline.active.left=[[ 'mode', 'paste' ], [ 'readonly', 'relativepath', 'modified' ]]
+let g:lightline.inactive.left=[[], [ 'relativepath' ]]
+let g:lightline.tabline.right=[[ 'pwd' ]]
+let g:lightline.component_function.pwd='LightlinePwd'
+let g:lightline.component_function.relativepath='LightlineRelativePath'
+function! LightlinePwd()
+	return fnamemodify(getcwd(), ':t')
+endfunction
+function! LightlineRelativePath()
 	let home = expand('~')
-	let root = fnamemodify(getcwd(), ':h')
+	let root = getcwd()
 	let path = expand('%:p')
 	if path[:len(root)-1] ==# root
 		return path[len(root)+1:]

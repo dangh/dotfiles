@@ -6,7 +6,6 @@ set lines=70 columns=273
 
 set guifont=Rec\ Mono\ Casual:h12
 "set guifont=PragmataPro\ Mono\ Liga:h14
-set linespace=1
 
 "disable cursur blinking
 set guicursor+=a:blinkon0
