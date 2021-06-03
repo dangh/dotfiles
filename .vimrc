@@ -203,7 +203,6 @@ if is_macvim
 		autocmd VimLeave * call s:store_cwd()
 	augroup END
 endif
-Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 
