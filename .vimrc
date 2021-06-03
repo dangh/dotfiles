@@ -161,7 +161,7 @@ set hlsearch "highlight all matches when searching with /
 set wrapscan "search wrap around at EOF
 set ignorecase "search are case insensitive
 set smartcase "unless they contain at least one capital letter
-set cursorline "highlight current line
+"set cursorline "highlight current line
 set list "show non-printable characters
 set listchars=tab:>\ ,
 set ttyfast "faster redrawing
