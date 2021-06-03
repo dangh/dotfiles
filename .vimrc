@@ -214,6 +214,7 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'dangh/vim-javascript'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'RRethy/vim-illuminate'
 Plug 'tpope/vim-abolish'
 Plug 'michaeljsmith/vim-indent-object'
