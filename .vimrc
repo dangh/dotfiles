@@ -82,19 +82,9 @@ command! -nargs=* PlugUpdate :call PlugUpdate(<args>)
 "AutoPlug }}}
 
 "VIMRC {{{
-if !exists('*ReSourceVimrc')
-	function ReSourceVimrc()
-		source $MYVIMRC
-		if exists('*lightline#init')
-			call lightline#init()
-			call lightline#colorscheme()
-			call lightline#update()
-		endif
-	endfunction
-endif
 augroup auto_source_vimrc_on_save
 	autocmd!
-	autocmd BufWritePost .vimrc call ReSourceVimrc()
+	autocmd BufWritePost .vimrc source % | call LightlineStyle()
 	autocmd BufWritePost .gvimrc source %
 augroup END
 noremap <silent> <expr> <F10>
@@ -306,24 +296,6 @@ let g:lightline={
 			\'tabline_subseparator': {},
 			\}
 let g:lightline.colorscheme='everforest'
-let g:lightline_style='slant'
-let g:lightline_separators={
-			\'slant': [ "\ue0b8", "\ue0b9", "\ue0bb" , "\ue0ba", "\ue0bc", "\ue0bd", "\ue0bf", "\ue0be" ],
-			\'arrow': [ "\ue0b0", "\ue0b1", "\ue0b3" , "\ue0b2" ],
-			\'curve': [ "\ue0b4", "\ue0b5", "\ue0b7" , "\ue0b6" ],
-			\}
-if has_key(g:lightline_separators, get(g:, 'lightline_style', ''))
-	let symbols = g:lightline_separators[g:lightline_style]
-	let g:lightline.separator = { 'left': symbols[0], 'right': symbols[3] }
-	let g:lightline.subseparator = { 'left': symbols[1], 'right': symbols[2] }
-	if len(symbols) > 4
-		let g:lightline.tabline_separator = { 'left': symbols[4], 'right': symbols[7] }
-		let g:lightline.tabline_subseparator = { 'left': symbols[5], 'right': symbols[6] }
-	else
-		let g:lightline.tabline_separator = { 'left': symbols[0], 'right': symbols[3] }
-		let g:lightline.tabline_subseparator = { 'left': symbols[1], 'right': symbols[2] }
-	endif
-endif
 let g:lightline.active.left=[[ 'mode', 'paste' ], [ 'readonly', 'relativepath', 'modified' ]]
 let g:lightline.inactive.left=[[], [ 'relativepath' ]]
 let g:lightline.tabline.right=[[ 'pwd' ]]
@@ -346,6 +318,35 @@ function! LightlineRelativePath()
 endfunction
 Plug 'itchyny/lightline.vim'
 call add(g:lightline#colorscheme#everforest#palette.tabline.right[0], 'bold')
+function! LightlineStyle(...)
+	if a:0 > 0
+		let g:lightline_style = a:1
+	endif
+	let l:lightline_separators={
+				\'slant': [ "\ue0b8", "\ue0b9", "\ue0bb" , "\ue0ba", "\ue0bc", "\ue0bd", "\ue0bf", "\ue0be" ],
+				\'arrow': [ "\ue0b0", "\ue0b1", "\ue0b3" , "\ue0b2" ],
+				\'curve': [ "\ue0b4", "\ue0b5", "\ue0b7" , "\ue0b6" ],
+				\'round': [ "\ue0b4", "\ue0b5", "\ue0b7" , "\ue0b6" ],
+				\}
+	let l:style = get(g:, 'lightline_style', '')
+	if has_key(l:lightline_separators, l:style)
+		let symbols = l:lightline_separators[l:style]
+		let g:lightline.separator = { 'left': symbols[0], 'right': symbols[3] }
+		let g:lightline.subseparator = { 'left': symbols[1], 'right': symbols[2] }
+		if len(symbols) > 4
+			let g:lightline.tabline_separator = { 'left': symbols[4], 'right': symbols[7] }
+			let g:lightline.tabline_subseparator = { 'left': symbols[5], 'right': symbols[6] }
+		else
+			let g:lightline.tabline_separator = { 'left': symbols[0], 'right': symbols[3] }
+			let g:lightline.tabline_subseparator = { 'left': symbols[1], 'right': symbols[2] }
+		endif
+	endif
+	call lightline#init()
+	call lightline#colorscheme()
+	call lightline#update()
+endfunction
+command! -nargs=? LightlineStyle :call LightlineStyle(<q-args>)
+call LightlineStyle(get(g:, 'lightline_style', 'slant'))
 
 
 if executable('fd') && executable('fzy')
