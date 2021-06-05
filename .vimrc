@@ -346,7 +346,7 @@ function! LightlineStyle(...)
 	call lightline#update()
 endfunction
 command! -nargs=? LightlineStyle :call LightlineStyle(<q-args>)
-call LightlineStyle(get(g:, 'lightline_style', 'slant'))
+call LightlineStyle(get(g:, 'lightline_style', 'curve'))
 
 
 if executable('fd') && executable('fzy')
