@@ -429,6 +429,7 @@ function! g:fthook.javascript(_)
 	setlocal foldmethod=syntax foldnestmax=1
 	setlocal signcolumn=yes
 	set cinoptions=:0 "put case statement on the same indent as switch
+	set foldtext=getline(v:foldstart)
 endfunction
 function! g:fthook.vue(_)
 	setlocal nofoldenable
