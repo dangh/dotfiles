@@ -409,9 +409,5 @@ key_bindings:
   - { mods: Command, key: Key9, command: { program: *TMUX, args: [ select-window, -t 9 ] } }
   - { mods: Control, key: Tab, command: { program: *TMUX, args: [ next-window ] } }
   - { mods: Control|Shift, key: Tab, command: { program: *TMUX, args: [ previous-window ] } }
-  - { mods: Command, key: H, command: { program: *TMUX, args: [ select-pane, -L ] } }
-  - { mods: Command, key: L, command: { program: *TMUX, args: [ select-pane, -R ] } }
-  - { mods: Command, key: J, command: { program: *TMUX, args: [ select-pane, -D ] } }
-  - { mods: Command, key: K, command: { program: *TMUX, args: [ select-pane, -U ] } }
   - { mods: Command, key: R, command: { program: *TMUX, args: [ source-file, -q, ~/.tmux.conf, ;, display-message, Config reloaded! ] } }
   - { mods: Command, key: K, command: { program: *TMUX, args: [ send-keys, -R, C-l, ;, clear-history ] } }
