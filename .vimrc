@@ -450,7 +450,7 @@ for c in ['h', 'j', 'k', 'l']
 endfor
 
 "transpose characters
-nnoremap <silent> <C-t>      xph
+nnoremap <silent> <C-t>      xhPl
 inoremap <silent> <C-t> <Esc>xpi
 
 "prevent undo accident
