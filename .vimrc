@@ -141,7 +141,7 @@ set tabstop=2 "show tab as 2 spaces
 set softtabstop=2 "insert 2 spaces when press <TAB>
 set shiftwidth=2 "wrap line indent by 2 spaces
 "set number relativenumber "(leave it to augroup above)
-set signcolumn=auto "only show sign column when needed
+set signcolumn=yes "always show sign column
 set splitright "split pane show on the right
 set splitbelow "split pane show below
 set showtabline=2 "always show tab bar
@@ -420,6 +420,7 @@ let g:fthook={}
 function! g:fthook._(_)
 	if &modifiable
 		setlocal number relativenumber
+		set signcolumn=no
 	endif
 endfunction
 function! g:fthook.help(_)
@@ -429,7 +430,6 @@ function! g:fthook.help(_)
 endfunction
 function! g:fthook.javascript(_)
 	setlocal foldmethod=syntax foldnestmax=1
-	setlocal signcolumn=yes
 	set cinoptions=:0 "put case statement on the same indent as switch
 	set foldtext=getline(v:foldstart)
 endfunction
