@@ -20,16 +20,18 @@ function! Plug(repo, ...) abort
 	let l:url='https://github.com/'.a:repo
 	let l:opt={
 				\'as':fnamemodify(a:repo, ':t'),
+				\'branch':'master',
 				\}
 	if a:0 == 1
 		call extend(l:opt, a:1)
 	endif
 	let l:name=l:opt.as
+	let l:branch=l:opt.branch
 	let l:dir=expand('~/.vim/pack/plugged/opt/'.l:name)
 	let l:do_postinstall=0
 	if !isdirectory(l:dir)
 		echomsg '['.a:repo.'] installing... '
-		call system('git clone -q --depth 1 '.l:url.' '.l:dir)
+		call system('git clone -q --depth 1 --single-branch --branch '.l:branch.' '.l:url.' '.l:dir)
 		echon 'done'
 		let l:do_postinstall=1
 	endif
