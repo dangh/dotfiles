@@ -1,10 +1,12 @@
 #!/usr/bin/env zsh
 
 script="$0:A"
+srcDir=$(dirname $script)
 
 bootstrap() {
-	for f in $(git ls-files); do
-		src="$f:A"
+	for f in $(git -C $srcDir ls-files); do
+		src="$srcDir/$f"
+		src="$src:A"
 		dst="$HOME/$f"
 		dir="$dst:h"
 

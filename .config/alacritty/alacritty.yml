@@ -1,254 +1,166 @@
-EDITOR: &EDITOR /Applications/Sublime Text.app/Contents/SharedSupport/bin/subl
+EDITOR: &EDITOR /Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl
 SHELL: &SHELL /bin/dash
 TMUX: &TMUX /opt/local/bin/tmux
 
 window:
   decorations: none
-  startup_mode: Maximized
+  startup_mode: SimpleFullscreen
   padding:
     x: 2
     y: 2
   dynamic_padding: true
 font:
   normal:
-    family: PragmataPro Mono
+    family: PragmataPro
     style: Regular
   bold:
-    family: PragmataPro Mono
-    style: Regular
+    family: PragmataPro
+    style: Bold
   italic:
     family: Cartograph CF
-    style: Thin Italic
+    style: Light Italic
   bold_italic:
     family: Cartograph CF
-    style: Thin Italic
-  size: 11
+    style: Bold Italic
+  size: 14
+  glyph_offset:
+    y: 1
   use_thin_strokes: true
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 schemes:
 
   edge_light: &edge_light
     primary:
-      background: "0xfafafa"
-      foreground: "0x4b505b"
+      background: '#fafafa'
+      foreground: '#4b505b'
     normal:
-      black: "0x4b505b"
-      red: "0xd05858"
-      green: "0x608e32"
-      yellow: "0xbe7e05"
-      blue: "0x5079be"
-      magenta: "0xb05ccc"
-      cyan: "0x3a8b84"
-      white: "0xfafafa"
-    bright:
-      black: "0x4b505b"
-      red: "0xd05858"
-      green: "0x608e32"
-      yellow: "0xbe7e05"
-      blue: "0x5079be"
-      magenta: "0xb05ccc"
-      cyan: "0x3a8b84"
-      white: "0xfafafa"
+      black:   '#4b505b'
+      red:     '#d05858'
+      green:   '#608e32'
+      yellow:  '#be7e05'
+      blue:    '#5079be'
+      magenta: '#b05ccc'
+      cyan:    '#3a8b84'
+      white:   '#fafafa'
 
   edge_dark_default: &edge_dark_default
     primary:
-      background: "0x2c2e34"
-      foreground: "0xc5cdd9"
+      background: '#2c2e34'
+      foreground: '#c5cdd9'
     normal:
-      black: "0x3e4249"
-      red: "0xec7279"
-      green: "0xa0c980"
-      yellow: "0xdeb974"
-      blue: "0x6cb6eb"
-      magenta: "0xd38aea"
-      cyan: "0x5dbbc1"
-      white: "0xc5cdd9"
-    bright:
-      black: "0x3e4249"
-      red: "0xec7279"
-      green: "0xa0c980"
-      yellow: "0xdeb974"
-      blue: "0x6cb6eb"
-      magenta: "0xd38aea"
-      cyan: "0x5dbbc1"
-      white: "0xc5cdd9"
+      black:   '#3e4249'
+      red:     '#ec7279'
+      green:   '#a0c980'
+      yellow:  '#deb974'
+      blue:    '#6cb6eb'
+      magenta: '#d38aea'
+      cyan:    '#5dbbc1'
+      white:   '#c5cdd9'
 
   edge_dark_aura: &edge_dark_aura
     primary:
-      background: "0x2b2d37"
-      foreground: "0xc5cdd9"
+      background: '#2b2d37'
+      foreground: '#c5cdd9'
     normal:
-      black: "0x363a49"
-      red: "0xec7279"
-      green: "0xa0c980"
-      yellow: "0xdeb974"
-      blue: "0x6cb6eb"
-      magenta: "0xd38aea"
-      cyan: "0x5dbbc1"
-      white: "0xc5cdd9"
-    bright:
-      black: "0x363a49"
-      red: "0xec7279"
-      green: "0xa0c980"
-      yellow: "0xdeb974"
-      blue: "0x6cb6eb"
-      magenta: "0xd38aea"
-      cyan: "0x5dbbc1"
-      white: "0xc5cdd9"
+      black:   '#363a49'
+      red:     '#ec7279'
+      green:   '#a0c980'
+      yellow:  '#deb974'
+      blue:    '#6cb6eb'
+      magenta: '#d38aea'
+      cyan:    '#5dbbc1'
+      white:   '#c5cdd9'
 
   edge_dark_neon: &edge_dark_neon
     primary:
-      background: "0x2b2d3a"
-      foreground: "0xc5cdd9"
+      background: '#2b2d3a'
+      foreground: '#c5cdd9'
     normal:
-      black: "0x363a4e"
-      red: "0xec7279"
-      green: "0xa0c980"
-      yellow: "0xdeb974"
-      blue: "0x6cb6eb"
-      magenta: "0xd38aea"
-      cyan: "0x5dbbc1"
-      white: "0xc5cdd9"
-    bright:
-      black: "0x363a4e"
-      red: "0xec7279"
-      green: "0xa0c980"
-      yellow: "0xdeb974"
-      blue: "0x6cb6eb"
-      magenta: "0xd38aea"
-      cyan: "0x5dbbc1"
-      white: "0xc5cdd9"
+      black:   '#363a4e'
+      red:     '#ec7279'
+      green:   '#a0c980'
+      yellow:  '#deb974'
+      blue:    '#6cb6eb'
+      magenta: '#d38aea'
+      cyan:    '#5dbbc1'
+      white:   '#c5cdd9'
 
   sonokai_default: &sonokai_default
     primary:
-      background: "0x2c2e34"
-      foreground: "0xe2e2e3"
+      background: '#2c2e34'
+      foreground: '#e2e2e3'
     normal:
-      black: "0x181819"
-      red: "0xfc5d7c"
-      green: "0x9ed072"
-      yellow: "0xe7c664"
-      blue: "0x76cce0"
-      magenta: "0xb39df3"
-      cyan: "0xf39660"
-      white: "0xe2e2e3"
-    bright:
-      black: "0x181819"
-      red: "0xfc5d7c"
-      green: "0x9ed072"
-      yellow: "0xe7c664"
-      blue: "0x76cce0"
-      magenta: "0xb39df3"
-      cyan: "0xf39660"
-      white: "0xe2e2e3"
+      black:   '#181819'
+      red:     '#fc5d7c'
+      green:   '#9ed072'
+      yellow:  '#e7c664'
+      blue:    '#76cce0'
+      magenta: '#b39df3'
+      cyan:    '#f39660'
+      white:   '#e2e2e3'
 
   sonokai_shusia: &sonokai_shusia
     primary:
-      background: "0x2d2a2e"
-      foreground: "0xe3e1e4"
+      background: '#2d2a2e'
+      foreground: '#e3e1e4'
     normal:
-      black: "0x1a181a"
-      red: "0xf85e84"
-      green: "0x9ecd6f"
-      yellow: "0xe5c463"
-      blue: "0x7accd7"
-      magenta: "0xab9df2"
-      cyan: "0xef9062"
-      white: "0xe3e1e4"
-    bright:
-      black: "0x1a181a"
-      red: "0xf85e84"
-      green: "0x9ecd6f"
-      yellow: "0xe5c463"
-      blue: "0x7accd7"
-      magenta: "0xab9df2"
-      cyan: "0xef9062"
-      white: "0xe3e1e4"
+      black:   '#1a181a'
+      red:     '#f85e84'
+      green:   '#9ecd6f'
+      yellow:  '#e5c463'
+      blue:    '#7accd7'
+      magenta: '#ab9df2'
+      cyan:    '#ef9062'
+      white:   '#e3e1e4'
 
   sonokai_andromeda: &sonokai_andromeda
     primary:
-      background: "0x2b2d3a"
-      foreground: "0xe1e3e4"
+      background: '#2b2d3a'
+      foreground: '#e1e3e4'
     normal:
-      black: "0x181a1c"
-      red: "0xfb617e"
-      green: "0x9ed06c"
-      yellow: "0xedc763"
-      blue: "0x6dcae8"
-      magenta: "0xbb97ee"
-      cyan: "0xf89860"
-      white: "0xe1e3e4"
-    bright:
-      black: "0x181a1c"
-      red: "0xfb617e"
-      green: "0x9ed06c"
-      yellow: "0xedc763"
-      blue: "0x6dcae8"
-      magenta: "0xbb97ee"
-      cyan: "0xf89860"
-      white: "0xe1e3e4"
+      black:   '#181a1c'
+      red:     '#fb617e'
+      green:   '#9ed06c'
+      yellow:  '#edc763'
+      blue:    '#6dcae8'
+      magenta: '#bb97ee'
+      cyan:    '#f89860'
+      white:   '#e1e3e4'
 
   sonokai_atlantis: &sonokai_atlantis
     primary:
-      background: "0x2a2f38"
-      foreground: "0xe1e3e4"
+      background: '#2a2f38'
+      foreground: '#e1e3e4'
     normal:
-      black: "0x181a1c"
-      red: "0xff6578"
-      green: "0x9dd274"
-      yellow: "0xeacb64"
-      blue: "0x72cce8"
-      magenta: "0xba9cf3"
-      cyan: "0xf69c5e"
-      white: "0xe1e3e4"
-    bright:
-      black: "0x181a1c"
-      red: "0xff6578"
-      green: "0x9dd274"
-      yellow: "0xeacb64"
-      blue: "0x72cce8"
-      magenta: "0xba9cf3"
-      cyan: "0xf69c5e"
-      white: "0xe1e3e4"
+      black:   '#181a1c'
+      red:     '#ff6578'
+      green:   '#9dd274'
+      yellow:  '#eacb64'
+      blue:    '#72cce8'
+      magenta: '#ba9cf3'
+      cyan:    '#f69c5e'
+      white:   '#e1e3e4'
 
   sonokai_maia: &sonokai_maia
     primary:
-      background: "0x273136"
-      foreground: "0xe1e2e3"
+      background: '#273136'
+      foreground: '#e1e2e3'
     normal:
-      black: "0x1c1e1f"
-      red: "0xf76c7c"
-      green: "0x9cd57b"
-      yellow: "0xe3d367"
-      blue: "0x78cee9"
-      magenta: "0xbaa0f8"
-      cyan: "0xf3a96a"
-      white: "0xe1e2e3"
-    bright:
-      black: "0x1c1e1f"
-      red: "0xf76c7c"
-      green: "0x9cd57b"
-      yellow: "0xe3d367"
-      blue: "0x78cee9"
-      magenta: "0xbaa0f8"
-      cyan: "0xf3a96a"
-      white: "0xe1e2e3"
+      black:   '#1c1e1f'
+      red:     '#f76c7c'
+      green:   '#9cd57b'
+      yellow:  '#e3d367'
+      blue:    '#78cee9'
+      magenta: '#baa0f8'
+      cyan:    '#f3a96a'
+      white:   '#e1e2e3'
 
   everforest_dark_hard: &everforest_dark_hard
     primary:
       background: '#2b3339'
       foreground: '#d3c6aa'
     normal:
-      black:   '#4b565c'
-      red:     '#e67e80'
-      green:   '#a7c080'
-      yellow:  '#dbbc7f'
-      blue:    '#7fbbb3'
-      magenta: '#d699b6'
-      cyan:    '#83c092'
-      white:   '#d3c6aa'
-    bright:
       black:   '#4b565c'
       red:     '#e67e80'
       green:   '#a7c080'
@@ -271,30 +183,12 @@ schemes:
       magenta: '#d699b6'
       cyan:    '#83c092'
       white:   '#d3c6aa'
-    bright:
-      black:   '#4b565c'
-      red:     '#e67e80'
-      green:   '#a7c080'
-      yellow:  '#dbbc7f'
-      blue:    '#7fbbb3'
-      magenta: '#d699b6'
-      cyan:    '#83c092'
-      white:   '#d3c6aa'
 
   everforest_dark_soft: &everforest_dark_soft
     primary:
       background: '#323d43'
       foreground: '#d3c6aa'
     normal:
-      black:   '#4b565c'
-      red:     '#e67e80'
-      green:   '#a7c080'
-      yellow:  '#dbbc7f'
-      blue:    '#7fbbb3'
-      magenta: '#d699b6'
-      cyan:    '#83c092'
-      white:   '#d3c6aa'
-    bright:
       black:   '#4b565c'
       red:     '#e67e80'
       green:   '#a7c080'
@@ -317,30 +211,12 @@ schemes:
       magenta: '#df69ba'
       cyan:    '#35a77c'
       white:   '#dfddc8'
-    bright:
-      black:   '#5c6a72'
-      red:     '#f85552'
-      green:   '#8da101'
-      yellow:  '#dfa000'
-      blue:    '#3a94c5'
-      magenta: '#df69ba'
-      cyan:    '#35a77c'
-      white:   '#dfddc8'
 
   everforest_light_medium: &everforest_light_medium
     primary:
       background: '#fdf6e3'
       foreground: '#5c6a72'
     normal:
-      black:   '#5c6a72'
-      red:     '#f85552'
-      green:   '#8da101'
-      yellow:  '#dfa000'
-      blue:    '#3a94c5'
-      magenta: '#df69ba'
-      cyan:    '#35a77c'
-      white:   '#dfddc8'
-    bright:
       black:   '#5c6a72'
       red:     '#f85552'
       green:   '#8da101'
@@ -363,40 +239,29 @@ schemes:
       magenta: '#df69ba'
       cyan:    '#35a77c'
       white:   '#dfddc8'
-    bright:
-      black:   '#5c6a72'
-      red:     '#f85552'
-      green:   '#8da101'
-      yellow:  '#dfa000'
-      blue:    '#3a94c5'
-      magenta: '#df69ba'
-      cyan:    '#35a77c'
-      white:   '#dfddc8'
 
 colors: *everforest_dark_hard
-# background_opacity: 0.98
 selection:
   save_to_clipboard: true
 shell:
   program: *SHELL
   args:
     - -lc
-    - tmux new-session -As main
+    - tmux new-session -As main ";" set-option -g detach-on-destroy off
 key_bindings:
   #edit config
   - { mods: Command, key: Comma, command: { program: *EDITOR, args: [ ~/.config/alacritty/alacritty.yml ] } }
-  - { mods: Command|Alt, key: Comma, command: { program: *EDITOR, args: [ ~/.tmux.conf ] } }
+  - { mods: Command|Alt, key: Comma, command: { program: *EDITOR, args: [ ~/.config/tmux/tmux.conf ] } }
   #disable default keys
   - { mods: Command, key: Plus, action: None }
   - { mods: Command, key: Equals, action: None }
-  - { mods: Command|Control, key: F, action: ToggleSimpleFullscreen }
   #tmux
-  - { mods: Command, key: Backslash, command: { program: *TMUX, args: [ split-window, -h, -c, '#{pane_current_path}' ] } }  #conflicted with 1Password
+  - { mods: Command, key: K, command: { program: *TMUX, args: [ send-keys, -R, C-l, ;, clear-history ] } }
+  #tmux: window manager
   - { mods: Command|Shift, key: Backslash, command: { program: *TMUX, args: [ split-window, -h, -c, '#{pane_current_path}' ] } }
-  - { mods: Command, key: Minus, command: { program: *TMUX, args: [ split-window, -v, -c, '#{pane_current_path}' ] } }
   - { mods: Command|Shift, key: Minus, command: { program: *TMUX, args: [ split-window, -v, -c, '#{pane_current_path}' ] } }
-  - { mods: Command, key: W, command: { program: *TMUX, args: [ kill-pane ] } }
   - { mods: Command, key: T, command: { program: *TMUX, args: [ new-window, -c, '#{pane_current_path}' ] } }
+  - { mods: Command, key: W, command: { program: *TMUX, args: [ kill-window ] } }
   - { mods: Command, key: Key0, command: { program: *TMUX, args: [ select-window, -t 0 ] } }
   - { mods: Command, key: Key1, command: { program: *TMUX, args: [ select-window, -t 1 ] } }
   - { mods: Command, key: Key2, command: { program: *TMUX, args: [ select-window, -t 2 ] } }
@@ -407,7 +272,13 @@ key_bindings:
   - { mods: Command, key: Key7, command: { program: *TMUX, args: [ select-window, -t 7 ] } }
   - { mods: Command, key: Key8, command: { program: *TMUX, args: [ select-window, -t 8 ] } }
   - { mods: Command, key: Key9, command: { program: *TMUX, args: [ select-window, -t 9 ] } }
-  - { mods: Control, key: Tab, command: { program: *TMUX, args: [ next-window ] } }
-  - { mods: Control|Shift, key: Tab, command: { program: *TMUX, args: [ previous-window ] } }
-  - { mods: Command, key: R, command: { program: *TMUX, args: [ source-file, -q, ~/.tmux.conf, ;, display-message, Config reloaded! ] } }
-  - { mods: Command, key: K, command: { program: *TMUX, args: [ send-keys, -R, C-l, ;, clear-history ] } }
+  - { mods: Command|Control, key: F, command: { program: *TMUX, args: [ resize-pane, -Z ] } }
+  #tmux: session manager
+  - { mods: Command, key: N, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux new-session -dP)" ] } }
+  - { mods: Command|Shift, key: W, command: { program: *TMUX, args: [ kill-session ] } }
+  - { mods: Control, key: Tab, command: { program: *TMUX, args: [ switch-client, -n ] } }
+  - { mods: Control|Shift, key: Tab, command: { program: *TMUX, args: [ switch-client, -p ] } }
+  - { mods: Command|Shift, key: P, command: { program: *TMUX, args: [ choose-tree, -Zs ] } }
+  - { mods: Command|Shift, key: R, command: { program: *TMUX, args: [ command-prompt, "rename-session -- '%%'" ] } }
+  #tmux: vim
+  - { mods: Command, key: P, command: { program: *TMUX, args: [ send-keys, M-p ] } }
