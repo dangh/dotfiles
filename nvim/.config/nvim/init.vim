@@ -5,8 +5,8 @@ source ~/.config/nvim/dangh.vim
 ": Auto reload {{{
 augroup auto_source_vimrc_on_save
 	autocmd!
-	autocmd BufWritePost init.vim if has('nvim') | source % | if exists('*Powerline') | call Powerline() | endif | endif
-	autocmd BufWritePost dangh.vim if has('nvim') | source % | if exists('*Powerline') | call Powerline() | endif | endif
+	autocmd BufWritePost init.vim if has('nvim') | source % | if exists('*Powerline') | call Powerline('curve') | endif | endif
+	autocmd BufWritePost dangh.vim if has('nvim') | source % | if exists('*Powerline') | call Powerline('curve') | endif | endif
 augroup END
 ": }}}
 
@@ -48,4 +48,7 @@ Plug 't9md/vim-fthook'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
+map  <M-p>      :Telescope find_files<CR>
+imap <M-p> <Esc>:Telescope find_files<CR>
 ": }}}

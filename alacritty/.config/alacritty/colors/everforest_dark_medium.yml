@@ -1,0 +1,74 @@
+palette:
+  bg0:         &bg0         '#2f383e'
+  bg1:         &bg1         '#374247'
+  bg2:         &bg2         '#404c51'
+  bg3:         &bg3         '#4a555b'
+  bg4:         &bg4         '#525c62'
+  bg5:         &bg5         '#606f6a'
+  bg_visual:   &bg_visual   '#573e4c'
+  bg_red:      &bg_red      '#544247'
+  bg_green:    &bg_green    '#445349'
+  bg_blue:     &bg_blue     '#3b5360'
+  bg_yellow:   &bg_yellow   '#504f45'
+  fg:          &fg          '#d3c6aa'
+  red:         &red         '#e67e80'
+  orange:      &orange      '#e69875'
+  yellow:      &yellow      '#dbbc7f'
+  green:       &green       '#a7c080'
+  aqua:        &aqua        '#83c092'
+  blue:        &blue        '#7fbbb3'
+  purple:      &purple      '#d699b6'
+  grey0:       &grey0       '#7f897d'
+  grey1:       &grey1       '#859289'
+  grey2:       &grey2       '#9aa79d'
+  statusline1: &statusline1 '#a7c080'
+  statusline2: &statusline2 '#d3c6aa'
+  statusline3: &statusline3 '#e67e80'
+
+everforest_dark_medium: &everforest_dark_medium
+  #Normal
+  primary:
+    foreground: *fg
+    background: *bg0
+  search:
+    #Search
+    matches:
+      foreground: *bg0
+      background: *green
+    #IncSearch
+    focused_match:
+      foreground: *bg0
+      background: *red
+    #StatusLine
+    bar:
+      foreground: *grey1
+      background: *bg1
+  hints:
+    #IncSearch
+    start:
+      foreground: *bg0
+      background: *red
+    #Search
+    end:
+      foreground: *bg0
+      background: *green
+  #ToolbarButton
+  line_indicator:
+    foreground: *bg0
+    background: *green
+  #Visual
+  selection:
+    foreground: CellForeground
+    background: *bg_visual
+  #Terminal
+  normal:
+    black:   *bg3
+    red:     *red
+    green:   *green
+    yellow:  *yellow
+    blue:    *blue
+    magenta: *purple
+    cyan:    *aqua
+    white:   *fg
+
+colors: *everforest_dark_medium

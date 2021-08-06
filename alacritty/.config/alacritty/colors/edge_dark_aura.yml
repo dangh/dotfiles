@@ -1,0 +1,73 @@
+palette:
+  black:       &black       '#202023'
+  bg0:         &bg0         '#2b2d37'
+  bg1:         &bg1         '#333644'
+  bg2:         &bg2         '#363a49'
+  bg3:         &bg3         '#3a3e4e'
+  bg4:         &bg4         '#404455'
+  bg_grey:     &bg_grey     '#7e869b'
+  bg_red:      &bg_red      '#ec7279'
+  diff_red:    &diff_red    '#55393d'
+  bg_green:    &bg_green    '#a0c980'
+  diff_green:  &diff_green  '#394634'
+  bg_blue:     &bg_blue     '#6cb6eb'
+  diff_blue:   &diff_blue   '#354157'
+  bg_purple:   &bg_purple   '#d38aea'
+  diff_yellow: &diff_yellow '#4e432f'
+  fg:          &fg          '#c5cdd9'
+  red:         &red         '#ec7279'
+  yellow:      &yellow      '#deb974'
+  green:       &green       '#a0c980'
+  cyan:        &cyan        '#5dbbc1'
+  blue:        &blue        '#6cb6eb'
+  purple:      &purple      '#d38aea'
+  grey:        &grey        '#7e8294'
+  grey_dim:    &grey_dim    '#4c5064'
+
+edge_dark_aura: &edge_dark_aura
+  #Normal
+  primary:
+    foreground: *fg
+    background: *bg0
+  search:
+    #Search
+    matches:
+      foreground: *bg0
+      background: *bg_green
+    #IncSearch
+    focused_match:
+      foreground: *bg0
+      background: *bg_blue
+    #StatusLineNC
+    bar:
+      foreground: *grey
+      background: *bg1
+  hints:
+    #IncSearch
+    start:
+      foreground: *bg0
+      background: *bg_blue
+    #Search
+    end:
+      foreground: *bg0
+      background: *bg_green
+  #ToolbarButton
+  line_indicator:
+    foreground: *bg0
+    background: *bg_purple
+  #Visual
+  selection:
+    foreground: CellForeground
+    background: *bg3
+  #Terminal
+  normal:
+    black:   *bg2
+    red:     *red
+    green:   *green
+    yellow:  *yellow
+    blue:    *blue
+    magenta: *purple
+    cyan:    *cyan
+    white:   *fg
+
+colors: *edge_dark_aura

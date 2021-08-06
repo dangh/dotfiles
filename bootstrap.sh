@@ -5,9 +5,10 @@ srcDir=$(dirname $script)
 
 bootstrap() {
 	for f in $(git -C $srcDir ls-files); do
+
 		src="$srcDir/$f"
 		src="$src:A"
-		dst="$HOME/$f"
+		dst="$HOME/${f#*/}"
 		dir="$dst:h"
 
 		[[ "$src" == "$script" ]] && continue
@@ -18,7 +19,7 @@ bootstrap() {
 		fi
 
 		mkdir -p "$dir"
-		ln -sfv -- "$src" "$dst"
+		ln -sfv -- "$src" "$dst" | sed "s;$HOME;~;g"
 	done
 }
 

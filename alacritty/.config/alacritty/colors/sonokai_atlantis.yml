@@ -1,0 +1,71 @@
+palette:
+  black:       &black       '#181a1c'
+  bg0:         &bg0         '#2a2f38'
+  bg1:         &bg1         '#333846'
+  bg2:         &bg2         '#373c4b'
+  bg3:         &bg3         '#3d4455'
+  bg4:         &bg4         '#424b5b'
+  bg_red:      &bg_red      '#ff6d7e'
+  diff_red:    &diff_red    '#55393d'
+  bg_green:    &bg_green    '#a5e179'
+  diff_green:  &diff_green  '#394634'
+  bg_blue:     &bg_blue     '#7ad5f1'
+  diff_blue:   &diff_blue   '#354157'
+  diff_yellow: &diff_yellow '#4e432f'
+  fg:          &fg          '#e1e3e4'
+  red:         &red         '#ff6578'
+  orange:      &orange      '#f69c5e'
+  yellow:      &yellow      '#eacb64'
+  green:       &green       '#9dd274'
+  blue:        &blue        '#72cce8'
+  purple:      &purple      '#ba9cf3'
+  grey:        &grey        '#828a9a'
+  grey_dim:    &grey_dim    '#4f5a6d'
+
+sonokai_atlantis: &sonokai_atlantis
+  #Normal
+  primary:
+    foreground: *fg
+    background: *bg0
+  search:
+    #Search
+    matches:
+      foreground: *bg0
+      background: *bg_green
+    #IncSearch
+    focused_match:
+      foreground: *bg0
+      background: *bg_red
+    #StatusLineNC
+    bar:
+      foreground: *grey
+      background: *bg1
+  hints:
+    #IncSearch
+    start:
+      foreground: *bg0
+      background: *bg_red
+    #Search
+    end:
+      foreground: *bg0
+      background: *bg_green
+  #ToolbarButton
+  line_indicator:
+    foreground: *bg0
+    background: *bg_blue
+  #Visual
+  selection:
+    foreground: CellForeground
+    background: *bg3
+  #Terminal
+  normal:
+    black:   *black
+    red:     *red
+    green:   *green
+    yellow:  *yellow
+    blue:    *blue
+    magenta: *purple
+    cyan:    *orange
+    white:   *fg
+
+colors: *sonokai_atlantis

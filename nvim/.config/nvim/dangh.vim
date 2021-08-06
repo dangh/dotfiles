@@ -152,6 +152,10 @@ if ENV('truecolor')
 	set termguicolors
 end
 
+if &compatible
+	set nocompatible
+endif
+
 filetype plugin indent on
 syntax on
 set background=dark
@@ -404,8 +408,8 @@ if ENV('tmux')
 						\'#{?',
 							\'#{m|r:^@vim@,#{pane_title}},',
 							\'#{s|^@vim@||:#{pane_title}},',
-						\'#{pane_current_path}',
-					\'}',
+							\'#{pane_current_path}',
+						\'}',
 					\'}',
 					\'#{?',
 						\'#{m|r:Z,#{window_flags}},',
@@ -452,3 +456,54 @@ call tcomment#type#Define('yaml', '#%s')
 ": }}}
 
 Plug 'tpope/vim-surround'
+
+Plug 'easymotion/vim-easymotion'
+let g:EasyMotion_smartcase=1
+let g:EasyMotion_use_smartsign_us=1
+nmap s         <Plug>(easymotion-overwin-f2)
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+map  <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+Plug 'haya14busa/incsearch.vim'
+let g:incsearch#auto_nohlsearch=1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+Plug 'haya14busa/incsearch-easymotion.vim'
+map /  <Plug>(incsearch-easymotion-/)
+map ?  <Plug>(incsearch-easymotion-?)
+map g/ <Plug>(incsearch-easymotion-stay)
+
+"let g:sneak#label = 1
+"Plug 'justinmk/vim-sneak'
+"map f <Plug>Sneak_f
+"map F <Plug>Sneak_F
+"map t <Plug>Sneak_t
+"map T <Plug>Sneak_T
+
+"Plug 'tbo/notion'
+"hi NotionLabel guifg=red guibg=black ctermfg=red ctermbg=black
+"nmap <silent> c :NotionJump<CR>
+
+"motion in wrapped line without breaking <vcount>
+"https://stackoverflow.com/a/21000307/1578964
+noremap <expr> j v:count ? 'j' : 'gj'
+noremap <expr> k v:count ? 'k' : 'gk'
+noremap <expr> $ v:count ? '$' : 'g$'
+noremap <expr> ^ v:count ? '^' : 'g^'
+noremap <expr> 0 v:count ? '0' : 'g0'
+
+"make * # case-sensitive
+"https://vi.stackexchange.com/a/4055
+nnoremap <silent>  * :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchforward=1<CR>n
+nnoremap <silent>  # :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchforward=0<CR>n
+nnoremap <silent> g* :let @/='\C'   . expand('<cword>')       <CR>:let v:searchforward=1<CR>n
+nnoremap <silent> g# :let @/='\C'   . expand('<cword>')       <CR>:let v:searchforward=0<CR>n
+
