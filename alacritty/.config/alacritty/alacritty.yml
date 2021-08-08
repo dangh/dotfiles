@@ -23,25 +23,14 @@ import:
 window:
   decorations: none
   startup_mode: SimpleFullscreen
-  padding:
-    x: 2
-    y: 2
   dynamic_padding: true
 font:
   normal:
-    family: PragmataPro
-    style: Regular
-  bold:
-    family: PragmataPro
-    style: Bold
-  italic:
-    family: Cartograph CF
-    style: Light Italic
-  bold_italic:
-    family: Cartograph CF
-    style: Bold Italic
+    #font patched with https://github.com/twardoch/fonttools-opentype-feature-freezer
+    family: PragmataPro Liga Math
   size: 14
   glyph_offset:
+    #for PragmataPro font
     y: 1
   use_thin_strokes: true
 draw_bold_text_with_bright_colors: false
