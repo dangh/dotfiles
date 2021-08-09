@@ -63,6 +63,7 @@ key_bindings:
   - { mods: Command, key: Equals, action: None }
   #tmux
   - { mods: Command, key: K, command: { program: *TMUX, args: [ send-keys, -R, C-l, ;, clear-history ] } }
+  - { mods: Command, key: F, command: { program: *TMUX, args: [ copy-mode;, command-prompt, -i, -I, "#{pane_search_string}", -p, "(search down)", "send -X search-forward-incremental \"%%%\"" ] } }
   #tmux: window manager
   - { mods: Command|Shift, key: Backslash, command: { program: *TMUX, args: [ split-window, -h, -c, '#{pane_current_path}' ] } }
   - { mods: Command|Shift, key: Minus, command: { program: *TMUX, args: [ split-window, -v, -c, '#{pane_current_path}' ] } }
