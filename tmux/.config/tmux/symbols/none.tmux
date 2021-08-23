@@ -1,0 +1,10 @@
+set-option -gU @theme_symbol_ab
+set-option -gU @theme_symbol_bc
+set-option -gU @theme_symbol_cc
+set-option -gU @theme_symbol_xx
+set-option -gU @theme_symbol_xy
+set-option -gU @theme_symbol_yz
+set-option -gU @theme_symbol_cwin_left
+set-option -gU @theme_symbol_cwin_right
+set-option -gU @theme_symbol_win_left
+set-option -gU @theme_symbol_win_right
