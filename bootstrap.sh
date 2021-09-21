@@ -21,6 +21,11 @@ bootstrap() {
 		mkdir -p "$dir"
 		ln -sfv -- "$src" "$dst" | sed "s;$HOME;~;g"
 	done
+
+	git config --global core.excludesfile '~/.gitignore'
+	git config --global core.autocrlf 'input'
+	git config --global core.eol 'lf'
+	git config --global core.attributesfile '~/.gitattributes'
 }
 
 bootstrap
