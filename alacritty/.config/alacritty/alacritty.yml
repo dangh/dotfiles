@@ -40,7 +40,7 @@ shell:
   program: *SHELL
   args:
     - -lc
-    - tmux new-session -As main ";" set-option -g detach-on-destroy off
+    - tmux -u new-session -As main ";" set-option -g detach-on-destroy off
 hints:
   enabled:
     - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
