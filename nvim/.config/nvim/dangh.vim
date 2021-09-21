@@ -500,6 +500,14 @@ noremap <expr> $ v:count ? '$' : 'g$'
 noremap <expr> ^ v:count ? '^' : 'g^'
 noremap <expr> 0 v:count ? '0' : 'g0'
 
+let g:tmux_navigator_no_mappings=1
+let g:tmux_navigator_disable_when_zoomed=1
+Plug 'christoomey/vim-tmux-navigator'
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
+
 "make * # case-sensitive
 "https://vi.stackexchange.com/a/4055
 nnoremap <silent>  * :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchforward=1<CR>n
