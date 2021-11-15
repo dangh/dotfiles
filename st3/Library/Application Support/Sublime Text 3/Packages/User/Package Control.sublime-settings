@@ -63,6 +63,8 @@
 	[
 		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-github-color",
 		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-1space/st3",
-		"https://sublime-repo.vercel.app/api/repo?url=dangh/SublimeLinter-eslint"
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-json",
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-fork",
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-caret-position"
 	]
 }
