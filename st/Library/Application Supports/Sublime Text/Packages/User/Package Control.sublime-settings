@@ -1,0 +1,45 @@
+{
+	"bootstrapped": true,
+	"repositories":
+	[
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-1space",
+		//"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-caret-position",
+		//"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-ecmascript/personalize",
+		//"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-fork",
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-github-color",
+		//"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-javascript-snippets-standard",
+		//"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-json",
+		//"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-style",
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/SublimeLinter-eslint",
+	],
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Awk",
+		"ColorHints",
+		"fish",
+		"JsPrettier",
+		"LSP",
+		"LSP-typescript",
+		"NeoVintageous",
+		"Package Control",
+		"PackageDev",
+		"PackageResourceViewer",
+		"Stylus",
+		"sublime-1space",
+		"sublime-caret-position",
+		"sublime-fork",
+		"sublime-github-color",
+		"sublime-json",
+		"sublime-style",
+		"Tmux Syntax Highlight",
+		"VimL",
+		"Vue Syntax Highlight",
+	],
+	"downloader_precedence": {
+		"osx": ["curl"],
+	},
+}
