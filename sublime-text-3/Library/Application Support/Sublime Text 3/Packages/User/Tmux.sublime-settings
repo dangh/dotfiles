@@ -1,0 +1,12 @@
+{
+	"extensions":
+	[
+		"conf",
+		"tmux"
+	],
+  "font_options":
+  [
+    "gray_antialias",
+    "no_calt"
+  ],
+}

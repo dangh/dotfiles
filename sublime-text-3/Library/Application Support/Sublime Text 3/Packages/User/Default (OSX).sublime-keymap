@@ -1,0 +1,86 @@
+[
+  //disable builtin keymaps
+  { "keys": ["super+o"], "command": "noop" },
+  { "keys": ["super+["], "command": "noop" },
+  { "keys": ["super+]"], "command": "noop" },
+  //disable close last window with super+w when no tab available
+  { "keys": ["super+w"], "command": "noop", "context":
+    [{ "key": "group_has_transient_sheet", "operator": "equal", "operand": true }]
+  },
+  //paste-and-indent by default
+  // { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["super+shift+r"], "command": "reveal_in_side_bar" },
+  //dashdoc
+  { "keys": ["f3"], "command": "dash_doc" },
+  //toggle quotes
+  { "keys": ["ctrl+shift+'"], "command": "toggle_quotes" },
+  //jumpy
+  // { "keys": ["shift+enter"], "command": "jumpy" },
+  // { "keys": ["f"], "command": "jumpy", "context":
+  //   [{ "key": "setting.command_mode" }]
+  // },
+  //ace-jump
+  // { "keys": ["ctrl+f"], "command": "ace_jump_word" },
+  // { "keys": ["f"], "command": "ace_jump_word", "context":
+  //   [{ "key": "setting.command_mode" }]
+  // },
+  //disable zoom
+  { "keys": ["super+-"], "command": "noop" },
+  { "keys": ["super+="], "command": "noop" },
+  //disable spelling
+  { "keys": ["f6"], "command": "noop" },
+  //disable vintage undo/redo
+  // { "keys": ["u"], "command": "noop", "context":
+  //   [{ "key": "setting.command_mode" }]
+  // },
+  // { "keys": ["ctrl+r"], "command": "noop", "context":
+  //   [
+  //     { "key": "setting.command_mode" },
+  //     { "key": "setting.vintage_ctrl_keys" }
+  //   ]
+  // },
+  //origami
+  // { "keys": ["super+w"], "command": "destroy_pane", "args": {"direction": "self"}, "context":
+  //   [{ "key": "group_has_transient_sheet", "operator": "equal", "operand": true }]
+  // },
+  { "keys": ["super+shift+\\"], "command": "travel_to_pane", "args": {"direction": "right"} },
+  { "keys": ["super+ctrl+shift+\\"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+  { "keys": ["super+ctrl+shift+\\"], "command": "travel_to_pane", "args": {"direction": "right"},
+    "context": [{ "key": "group_has_transient_sheet", "operator": "equal", "operand": true }]
+  },
+  { "keys": ["super+shift+-"], "command": "travel_to_pane", "args": {"direction": "down"} },
+  { "keys": ["super+ctrl+shift+-"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+  { "keys": ["super+ctrl+shift+-"], "command": "travel_to_pane", "args": {"direction": "down"},
+    "context": [{ "key": "group_has_transient_sheet", "operator": "equal", "operand": true }]
+  },
+  //vim movement
+  // { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true}},
+  // { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false}},
+  // { "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false}},
+  // { "keys": ["ctrl+l"], "command": "move", "args": {"by": "characters", "forward": true}},
+  // Origami (Panes)
+  { "keys": ["ctrl+k"], "command": "travel_to_pane", "args": {"direction": "up", "create_new_if_necessary": false}, "context": [{"key": "vi_command_mode_aware"}] },
+  { "keys": ["ctrl+l"], "command": "travel_to_pane", "args": {"direction": "right", "create_new_if_necessary": false}, "context": [{"key": "vi_command_mode_aware"}] },
+  { "keys": ["ctrl+j"], "command": "travel_to_pane", "args": {"direction": "down", "create_new_if_necessary": false}, "context": [{"key": "vi_command_mode_aware"}] },
+  { "keys": ["ctrl+h"], "command": "travel_to_pane", "args": {"direction": "left", "create_new_if_necessary": false}, "context": [{"key": "vi_command_mode_aware"}] },
+  { "keys": ["ctrl+alt+k"], "command": "carry_file_to_pane", "args": {"direction": "up", "create_new_if_necessary": true, "destroy_old_if_empty": false}, "context": [{"key": "vi_command_mode_aware"}] },
+  { "keys": ["ctrl+alt+l"], "command": "carry_file_to_pane", "args": {"direction": "right", "create_new_if_necessary": true, "destroy_old_if_empty": false}, "context": [{"key": "vi_command_mode_aware"}] },
+  { "keys": ["ctrl+alt+j"], "command": "carry_file_to_pane", "args": {"direction": "down", "create_new_if_necessary": true, "destroy_old_if_empty": false}, "context": [{"key": "vi_command_mode_aware"}] },
+  { "keys": ["ctrl+alt+h"], "command": "carry_file_to_pane", "args": {"direction": "left", "create_new_if_necessary": true, "destroy_old_if_empty": false}, "context": [{"key": "vi_command_mode_aware"}] },
+  //auto-pair brackets with spaces
+  {
+    "keys": [" "], "command": "insert_snippet", "args": {"contents": " $0 "}, "context": [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "preceding_text", "operator": "regex_contains", "operand": "[{\\[(]$", "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^[}\\])]", "match_all": true },
+    ]
+  },
+  { "keys": ["super+equals"], "command": "increment_decrement", "args": { "plus": true } },
+  { "keys": ["super+minus"], "command": "increment_decrement", "args": { "plus": false } },
+  //switch tab in order
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+  { "keys": ["ctrl+pagedown"], "command": "next_view_in_stack" },
+  { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
+]

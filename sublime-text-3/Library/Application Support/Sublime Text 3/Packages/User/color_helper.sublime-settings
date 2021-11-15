@@ -1,0 +1,7 @@
+// Settings in here override those in "ColorHelper/color_helper.sublime-settings",
+
+{
+	"generic": {
+		"allow_scanning": true, "color_class": "css-level-4", "scanning": ["-comment"]
+	}
+}

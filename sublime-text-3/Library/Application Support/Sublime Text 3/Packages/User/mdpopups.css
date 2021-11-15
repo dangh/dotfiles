@@ -1,0 +1,25 @@
+html {
+  --mdpopups-font-mono: "PragmataPro Mono Liga";
+}
+.mdpopups div.highlight,
+.mdpopups pre.highlight {
+  margin: 0;
+}
+.lsp_popup {
+  margin: 0;
+  padding: 0;
+}
+.lsp_popup .diagnostics {
+  margin: 0;
+}
+.lsp_popup p {
+  padding: 0;
+  margin: 0;
+  font-family: var(--mdpopups-font-mono);
+}
+pre.related_info {
+  margin: 0;
+}
+
+#jumpy { background-color: hsl(220, 13%, 18%); }
+#jumpy .label { background-color: hsl(39, 67%, 69%); font-size: 9px; border-radius: 2px; padding-left: 1px; padding-right: 1px; }

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+for(let ${1:i} = ${2:arr}.length-1; ${1:i} >= 0; ${1:i}--) {
+  $0
+}//for
+]]></content>
+	<description>Vijay for..i-- loop</description>
+	<scope>source.js</scope>
+	<tabTrigger>vforb</tabTrigger>
+</snippet>

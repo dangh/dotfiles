@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+for(let ${1:item} of ${2:arr}) {
+  $0
+}//for
+]]></content>
+	<description>Vijay for..of loop</description>
+	<scope>source.js</scope>
+	<tabTrigger>vforof</tabTrigger>
+</snippet>

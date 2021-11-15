@@ -1,0 +1,9 @@
+{
+	"detect_indentation": false,
+	"extensions":
+	[
+		"YAML-tmPreferences",
+		"YAML-tmTheme"
+	],
+	"tab_size": 2
+}

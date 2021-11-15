@@ -1,0 +1,35 @@
+{
+  // http://www.sublimetext.com/docs/3/color_schemes.html
+  "variables": {
+    // "green": "#FF0000",
+  },
+  "globals": {
+    // "foreground": "var(green)",
+  },
+  "rules": [
+    {
+      "scope": "source.tmux command",
+      "foreground": "var(--syntax-color-method)",
+    },
+    {
+      "scope": "source.tmux flag",
+      "foreground": "var(--syntax-color-parameter)",
+    },
+    {
+      "scope": "source.tmux option.builtin",
+      "foreground": "var(--syntax-color-support)",
+    },
+    {
+      "scope": "source.tmux option.user",
+      "foreground": "var(--syntax-color-variable)",
+    },
+    {
+      "scope": "source.tmux punctuation.separator",
+      "foreground": "var(--syntax-color-operator)",
+    },
+    {
+      "scope": "source.tmux meta.key, source.tmux meta.value",
+      "foreground": "var(--syntax-color-string)",
+    },
+  ],
+}

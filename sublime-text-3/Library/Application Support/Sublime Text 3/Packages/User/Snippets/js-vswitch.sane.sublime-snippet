@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+switch(${1:true}) {
+case ${2:true}: $0; break;
+default: break;
+}//switch
+]]></content>
+	<description>Vijay switch</description>
+	<scope>source.js</scope>
+	<tabTrigger>vswitch</tabTrigger>
+</snippet>

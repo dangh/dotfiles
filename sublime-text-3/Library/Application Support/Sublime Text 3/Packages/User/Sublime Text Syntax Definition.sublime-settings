@@ -1,0 +1,8 @@
+// These settings override both User and Default settings for the Sublime Text Syntax Definition syntax
+{
+  "font_options": [
+    "no_calt",
+    "gray_antialias",
+  ],
+  "word_separators": "./\\()\"':,.;<>~!@#$%^&*+=[]{}`~?"
+}

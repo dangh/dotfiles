@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+while(${1:true}) {
+  $0
+}//while
+]]></content>
+	<description>Vijay while loop</description>
+	<scope>source.js</scope>
+	<tabTrigger>vwhile</tabTrigger>
+</snippet>

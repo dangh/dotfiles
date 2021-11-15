@@ -1,0 +1,6 @@
+---
+description: Vijay class setter
+tabTrigger:  vset
+scope:       source.js
+---
+set $1(${2:value}) {$0}

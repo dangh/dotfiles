@@ -1,0 +1,105 @@
+{
+	"1space.overlay_vcs_status_badge": false,
+	"1space.show_tabs_scroll_buttons": true,
+	"animation_enabled": false,
+	"auto_complete": true,
+	"auto_complete_cycle": true,
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"*.so.*",
+		"gs",
+		"phantomjs",
+		"*.tgz",
+		"*.gz",
+		"*.lock"
+	],
+	"caret_extra_bottom": 1,
+	"caret_extra_top": 1,
+	"caret_extra_width": 2,
+	"caret_style": "solid",
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/sublime-github-color/OneDark.sublime-color-scheme",
+	"create_window_at_startup": false,
+	"drag_text": false,
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules",
+		".serverless",
+		"deploy-*",
+		".nuxt",
+		"web",
+		"content",
+		"target",
+		"examples",
+		"test"
+	],
+	"font_face": "PragmataPro Liga Math",
+	"font_options":
+	[
+		"gray_antialias",
+		"no_calt"
+	],
+	"font_size": 14,
+	"highlight_line": true,
+	"highlightedyank_duration": 100,
+	"ignored_packages":
+	[
+		"ColorHelper",
+		"LSP-typescript",
+		"Six",
+		"sublime-caret-position",
+		"SyncedSideBar",
+		"Tabnine",
+		"Vintage",
+		"Vintageous"
+	],
+	"index_files": false,
+	"line_padding_bottom": 3,
+	"line_padding_top": 2,
+	"mdpopups.user_css": "Packages/User/mdpopups.css",
+	"native_tabs": "disabled",
+	"neovintageous_build_version": 11100,
+	"scroll_past_end": true,
+	"shift_tab_unindent": true,
+	"show_tab_close_buttons": false,
+	"tab_size": 2,
+	"theme": "1Space-Dark.sublime-theme",
+	"theme_font_options":
+	[
+		"gray_antialias",
+		"dlig"
+	],
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"update_check": false,
+	"use_simple_full_screen": true,
+	"vintageous_clear_auto_indent_on_esc": false,
+	"vintageous_handle_keys":
+	{
+		"<C-/>": false,
+		"<C-P>": false
+	},
+	"vintageous_multi_cursor_exit_from_visual_mode": true,
+	"vintageous_reset_mode_when_switching_tabs": false,
+	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_sys_clipboard": true,
+	"word_wrap": true
+}

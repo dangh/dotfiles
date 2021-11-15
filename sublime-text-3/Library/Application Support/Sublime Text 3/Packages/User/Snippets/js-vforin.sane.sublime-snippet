@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+for(let ${1:key} in ${2:obj}) {
+  $0
+}//for
+]]></content>
+	<description>Vijay for..in loop</description>
+	<scope>source.js</scope>
+	<tabTrigger>vforin</tabTrigger>
+</snippet>

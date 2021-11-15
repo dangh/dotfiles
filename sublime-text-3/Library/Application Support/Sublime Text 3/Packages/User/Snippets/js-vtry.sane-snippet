@@ -1,0 +1,11 @@
+---
+description: Vijay try..catch
+tabTrigger:  vtry
+scope:       source.js
+---
+try {
+  $0
+} catch(err) {
+  log.error('Failed to $1!(err=', err, ')');
+  throw error.catch(err, 'failed to $1');
+}//catch

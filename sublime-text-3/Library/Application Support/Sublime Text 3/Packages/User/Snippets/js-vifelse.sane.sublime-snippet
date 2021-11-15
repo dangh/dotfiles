@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+if(${1:true}) {
+  $0
+} else {
+}//else
+]]></content>
+	<description>Vijay if-else statement</description>
+	<scope>source.js</scope>
+	<tabTrigger>vifelse</tabTrigger>
+</snippet>

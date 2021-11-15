@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+//$1Request
+async $1Request(opts, callback) {
+  log.debug('${1/(^.)/\u$1/} request with Options:[', opts, ']');
+  try {
+    //initiate $1 request
+    let handler = (await this.request('$1').catch(err => {
+      log.error('Failed to get $1 request for Provider:[', this.name, ']!(err=', err, ')');
+      throw(error.catch(err, 'failed to get $1 request'));
+    }));
+    let params = opts;
+    log.debug('Calling $1 with Params:[', params, '] for Provider:[', this.name, ']');
+    let response = handler.request(params);
+    if(callback) return callback(null, response); else return(response);
+  } catch(err) {
+    if(callback) return callback(err); else throw(err);
+  }//catch
+}//$1Request
+]]></content>
+	<description>provider request method</description>
+	<scope>source.js</scope>
+	<tabTrigger>vrequest</tabTrigger>
+</snippet>

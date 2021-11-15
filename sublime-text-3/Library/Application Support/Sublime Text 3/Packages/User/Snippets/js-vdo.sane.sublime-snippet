@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+do {
+  $0
+} while(${1:true});
+]]></content>
+	<description>Vijay do..while loop</description>
+	<scope>source.js</scope>
+	<tabTrigger>vdo</tabTrigger>
+</snippet>

@@ -1,0 +1,68 @@
+{
+	"bootstrapped": true,
+	"downloader_precedence":
+	{
+		"osx":
+		[
+			"curl"
+		]
+	},
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AceJump",
+		"AlignTab",
+		"AutoSetIndentation",
+		"Awk",
+		"Bison",
+		"ColorHelper",
+		"ColorHints",
+		"Dockerfile Syntax Highlighting",
+		"EditorConfig",
+		"EJS 2",
+		"Expand Selection to Quotes",
+		"FileManager",
+		"fish",
+		"GraphQL",
+		"Increment Decrement",
+		"JsPrettier",
+		"LESS",
+		"LSP",
+		"LSP-dockerfile",
+		"LSP-eslint",
+		"LSP-typescript",
+		"NeoVintageous",
+		"Origami",
+		"Package Control",
+		"PackageDev",
+		"PackageResourceViewer",
+		"SaneSnippets",
+		"Sass",
+		"Stylus",
+		"sublime-1space",
+		"sublime-caret-position",
+		"sublime-fork",
+		"sublime-github-color",
+		"sublime-json",
+		"SublimeLinter",
+		"SublimeLinter-contrib-dockerfilelint",
+		"SublimeLinter-eslint",
+		"SyncedSideBar",
+		"Tabnine",
+		"ToggleQuotes",
+		"TOML",
+		"TypeScript Syntax",
+		"VimL",
+		"Vue Syntax Highlight",
+		"WordHighlight"
+	],
+	"repositories":
+	[
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-github-color",
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-1space/st3",
+		"https://sublime-repo.vercel.app/api/repo?url=dangh/SublimeLinter-eslint"
+	]
+}

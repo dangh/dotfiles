@@ -1,0 +1,8 @@
+// Your settings for FileManager. See the default file to see the different options.
+{
+
+  "terminals":
+[
+  {"cmd": ["cmd"], "name": "CMD", "platform": "windows"}, {"cmd": ["open", "-a", "Terminal", "$cwd"], "name": "Terminal", "platform": "osx"}, {"cmd": ["gnome-terminal"], "name": "GNOME Terminal", "platform": "linux"}
+]
+}

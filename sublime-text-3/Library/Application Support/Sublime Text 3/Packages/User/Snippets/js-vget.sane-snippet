@@ -1,0 +1,6 @@
+---
+description: Vijay class getter
+tabTrigger:  vget
+scope:       source.js
+---
+get $1() {$0}

@@ -1,0 +1,9 @@
+---
+description: Vijay if-else statement
+tabTrigger:  vifelse
+scope:       source.js
+---
+if(${1:true}) {
+  $0
+} else {
+}//else

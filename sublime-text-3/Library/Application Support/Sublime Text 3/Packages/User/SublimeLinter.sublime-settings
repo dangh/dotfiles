@@ -1,0 +1,20 @@
+// SublimeLinter Settings - User
+{
+
+	"lint_mode": "load_save",
+	"styles": [
+		{
+			"scope": "region.redish markup.error.sublime_linter",
+			"mark_style": "squiggly_underline",
+      "types": ["error"]
+		},
+    {
+      "scope": "region.yellowish markup.warning.sublime_linter",
+      "mark_style": "squiggly_underline",
+      "types": ["warning"]
+    },
+    {
+      "mark_style": "squiggly_underline",
+    },
+	],
+}

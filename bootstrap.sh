@@ -4,8 +4,8 @@ script="$0:A"
 srcDir=$(dirname $script)
 
 bootstrap() {
-	for f in $(git -C $srcDir ls-files); do
-
+	files=$(git -C "${srcDir}" ls-files)
+	for f in ${(f)files}; do
 		src="$srcDir/$f"
 		src="$src:A"
 		dst="$HOME/${f#*/}"
