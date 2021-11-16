@@ -1,0 +1,24 @@
+---
+description: lambda handler
+tabTrigger:  vhandler
+scope:       source.js
+---
+'use strict';
+
+const request = require('common/request');
+const log = require('common/log');
+const error = require('common/error');
+const success = require('common/success');
+
+//handler
+exports.handler = async (event, context) => {
+  log.debug('Event:[', event, '] Context:[', context, ']');
+  try {
+    request.init(event, context);
+    $0
+    return (new success.success());
+  } catch(err) {
+    log.error('Failed!(err=', err, ')');
+    throw(error.catch(err, 'failed'));
+  }//catch
+};//handler

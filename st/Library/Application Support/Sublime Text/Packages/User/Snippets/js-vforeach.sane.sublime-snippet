@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+forEach(${1:item} => {
+  $0
+});//forEach
+]]></content>
+	<description>Vijay .forEach</description>
+	<scope>source.js</scope>
+	<tabTrigger>vforeach</tabTrigger>
+</snippet>

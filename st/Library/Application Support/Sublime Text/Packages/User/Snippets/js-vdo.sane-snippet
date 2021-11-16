@@ -1,0 +1,8 @@
+---
+description: Vijay do..while loop
+tabTrigger:  vdo
+scope:       source.js
+---
+do {
+  $0
+} while(${1:true});

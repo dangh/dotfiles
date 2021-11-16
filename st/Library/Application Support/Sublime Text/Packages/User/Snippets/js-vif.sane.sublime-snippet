@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+if(${1:true}) {
+  $0
+}//if
+]]></content>
+	<description>Vijay if statement</description>
+	<scope>source.js</scope>
+	<tabTrigger>vif</tabTrigger>
+</snippet>

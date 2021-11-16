@@ -1,0 +1,9 @@
+---
+description: Vijay arrow function declaration
+tabTrigger:  vfunction
+scope:       source.js
+---
+//$1
+const $1 = async ($2) => {
+  $0
+};//$1

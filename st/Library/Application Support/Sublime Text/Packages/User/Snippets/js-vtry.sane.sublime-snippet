@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+try {
+  $0
+} catch(err) {
+  log.error('Failed to $1!(err=', err, ')');
+  throw error.catch(err, 'failed to $1');
+}//catch
+]]></content>
+	<description>Vijay try..catch</description>
+	<scope>source.js</scope>
+	<tabTrigger>vtry</tabTrigger>
+</snippet>

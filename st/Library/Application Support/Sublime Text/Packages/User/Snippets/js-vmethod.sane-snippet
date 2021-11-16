@@ -1,0 +1,9 @@
+---
+description: Vijay class method
+tabTrigger:  vmethod
+scope:       source.js
+---
+//${1:method}
+async ${1:method}($2) {
+  $0
+}//${1:method}

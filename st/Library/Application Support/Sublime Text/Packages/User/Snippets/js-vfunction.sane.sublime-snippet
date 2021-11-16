@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+//$1
+const $1 = async ($2) => {
+  $0
+};//$1
+]]></content>
+	<description>Vijay arrow function declaration</description>
+	<scope>source.js</scope>
+	<tabTrigger>vfunction</tabTrigger>
+</snippet>

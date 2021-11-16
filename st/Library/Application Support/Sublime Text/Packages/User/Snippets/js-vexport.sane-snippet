@@ -1,0 +1,9 @@
+---
+description: CommonJS export
+tabTrigger:  vexport
+scope:       source.js
+---
+//$1
+module.exports.$1 = $2{
+  $0
+};//$1

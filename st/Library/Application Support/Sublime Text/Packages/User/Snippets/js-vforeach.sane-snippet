@@ -1,0 +1,8 @@
+---
+description: Vijay .forEach
+tabTrigger:  vforeach
+scope:       source.js
+---
+forEach(${1:item} => {
+  $0
+});//forEach

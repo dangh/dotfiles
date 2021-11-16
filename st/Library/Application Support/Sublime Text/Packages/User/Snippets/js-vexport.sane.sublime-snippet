@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+//$1
+module.exports.$1 = $2{
+  $0
+};//$1
+]]></content>
+	<description>CommonJS export</description>
+	<scope>source.js</scope>
+	<tabTrigger>vexport</tabTrigger>
+</snippet>

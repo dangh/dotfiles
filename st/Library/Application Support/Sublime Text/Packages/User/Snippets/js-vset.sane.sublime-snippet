@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+set $1(${2:value}) {$0}
+]]></content>
+	<description>Vijay class setter</description>
+	<scope>source.js</scope>
+	<tabTrigger>vset</tabTrigger>
+</snippet>

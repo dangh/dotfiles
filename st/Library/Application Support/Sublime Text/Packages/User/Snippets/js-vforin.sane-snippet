@@ -1,0 +1,8 @@
+---
+description: Vijay for..in loop
+tabTrigger:  vforin
+scope:       source.js
+---
+for(let ${1:key} in ${2:obj}) {
+  $0
+}//for

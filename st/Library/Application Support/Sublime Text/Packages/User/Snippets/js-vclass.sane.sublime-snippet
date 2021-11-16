@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+//$1
+class $1 {
+  $0
+}//$1
+]]></content>
+	<description>Vijay class definition</description>
+	<scope>source.js</scope>
+	<tabTrigger>vclass</tabTrigger>
+</snippet>
