@@ -1,0 +1,15 @@
+// SublimeLinter Settings - User
+{
+  "styles": [
+    {
+      "scope": "region.yellowish markup.warning.sublime_linter",
+      "types": ["warning"]
+    },
+    {
+      "icon": "heart",
+      "mark_style": "squiggly_underline",
+      "priority": 1,
+      "scope": "region.redish markup.error.sublime_linter"
+    }
+  ]
+}

@@ -35,6 +35,8 @@
 		"sublime-github-color",
 		"sublime-json",
 		"sublime-style",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
 		"Tmux Syntax Highlight",
 		"VimL",
 		"Vue Syntax Highlight",
