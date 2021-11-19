@@ -1,6 +1,6 @@
-EDITOR: &EDITOR /Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl
+EDITOR: &EDITOR /Applications/Sublime Text.app/Contents/SharedSupport/bin/subl
 SHELL: &SHELL /bin/dash
-TMUX: &TMUX /opt/brew/bin/tmux
+TMUX: &TMUX /opt/homebrew/bin/tmux
 
 import:
   #- ~/.config/alacritty/colors/edge_dark.yml
