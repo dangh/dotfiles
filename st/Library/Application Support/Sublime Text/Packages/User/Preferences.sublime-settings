@@ -56,4 +56,5 @@
 	"sublime_merge_path": null,
 	"close_windows_when_empty": false,
 	"shift_tab_unindent": true,
+	"show_rel_path": true,
 }
