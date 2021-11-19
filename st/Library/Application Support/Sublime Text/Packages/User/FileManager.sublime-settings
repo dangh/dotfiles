@@ -1,0 +1,10 @@
+// Your settings for FileManager. See the default file to see the different options.
+{
+  "terminals": [
+    {
+      "cmd": ["open", "-a", "Terminal", "$cwd"],
+      "name": "Terminal",
+      "platform": "osx",
+    }
+  ]
+}
