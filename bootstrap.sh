@@ -1,25 +1,25 @@
 #!/usr/bin/env zsh
 
-script="$0:A"
-srcDir=$(dirname $script)
+dotfiles_dir=$(dirname "$0:A")
 
 bootstrap() {
-	files=$(git -C "${srcDir}" ls-files)
-	for f in ${(f)files}; do
-		src="$srcDir/$f"
-		src="$src:A"
-		dst="$HOME/${f#*/}"
-		dir="$dst:h"
+	files=$(git -C "${dotfiles_dir}" ls-files)
+	for file in ${(f)files}; do
+		dotfile="$dotfiles_dir/$file"
+		dotfile="$dotfile:A"
+		dotfile_dir=$(dirname $dotfile)
+		symlink="$HOME/${file#*/}"
+		symlink_dir="$symlink:h"
 
-		[[ "$src" == "$script" ]] && continue
+		[[ "$dotfile_dir" == "$dotfiles_dir" ]] && continue
 
-		if [[ -e "$dst" && ! -L "$dst" ]]; then
+		if [[ -e "$symlink" && ! -L "$symlink" ]]; then
 			printf >&2 -- 'Moving non-linked %s to Trash.\n' "$f"
-			/bin/mv -v -- "$dst" "$HOME/.Trash"
+			/bin/mv -v -- "$symlink" "$HOME/.Trash"
 		fi
 
-		mkdir -p "$dir"
-		ln -sfv -- "$src" "$dst" | sed "s;$HOME;~;g"
+		mkdir -p "$symlink_dir"
+		ln -sfv -- "$dotfile" "$symlink" | sed "s;$HOME;~;g"
 	done
 
 	git config --global core.excludesfile '~/.gitignore'
