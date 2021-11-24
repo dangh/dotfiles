@@ -1,10 +1,12 @@
 // Your settings for FileManager. See the default file to see the different options.
 {
+  "ask_for_confirmation_on_delete": false,
+  "log_in_status_bar": "user",
   "terminals": [
     {
       "cmd": ["open", "-a", "Terminal", "$cwd"],
       "name": "Terminal",
       "platform": "osx",
     }
-  ]
+  ],
 }

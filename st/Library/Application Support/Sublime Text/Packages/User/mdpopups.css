@@ -1,5 +1,5 @@
 html {
-  --mdpopups-font-mono: "PragmataPro Mono Liga";
+  --mdpopups-font-mono: "PragmataPro Liga Math";
 }
 .mdpopups div.highlight,
 .mdpopups pre.highlight {
@@ -21,5 +21,13 @@ pre.related_info {
   margin: 0;
 }
 
-#jumpy { background-color: hsl(220, 13%, 18%); }
-#jumpy .label { background-color: hsl(39, 67%, 69%); font-size: 9px; border-radius: 2px; padding-left: 1px; padding-right: 1px; }
+#jumpy {
+  background-color: hsl(220, 13%, 18%);
+}
+#jumpy .label {
+  background-color: hsl(39, 67%, 69%);
+  font-size: 9px;
+  border-radius: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
