@@ -1,0 +1,9 @@
+// These settings override both User and Default settings for the EJS syntax
+{
+  "color_scheme": "Mariana.sublime-color-scheme",
+  "font_face": "Victor Mono Medium",
+  "font_size": 11,
+  "line_padding_top": 0,
+  "line_padding_bottom": 0,
+  "font_options": [],
+}

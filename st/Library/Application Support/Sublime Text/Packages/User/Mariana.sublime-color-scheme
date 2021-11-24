@@ -1,0 +1,33 @@
+{
+  // http://www.sublimetext.com/docs/3/color_schemes.html
+  "variables": {
+  },
+  "globals": {
+    "selection": "var(orange3)",
+    "selection_foreground": "var(black)",
+    "selection_border_width": "0",
+    "caret": "var(red)",
+    "block_caret": "var(red)"
+  },
+  "rules": [
+    {
+      "name": "EJS silent except JS",
+      "scope": "comment - source.js, punctuation.definition.comment - source.js, text.ejs entity.other.attribute-name - source.js, text.ejs invalid - source.js, text.ejs meta.attribute-with-value - meta.attribute-with-value.class.html - source.js, text.ejs meta.attribute-with-value string - meta.class-name.html - source.js, text.ejs meta.attribute-with-value string punctuation.definition - punctuation.definition.js.begin.ejs - punctuation.definition.js.end.ejs - source.js, text.ejs punctuation.definition.string.begin.html - source.js, text.ejs punctuation.definition.string.end.html - source.js, text.ejs punctuation.definition.tag - source.js, text.ejs punctuation.separator - source.js, text.ejs punctuation.terminator - source.js, text.ejs source.css - source.js, text.ejs source.css constant.numeric - source.js, text.ejs source.css constant.numeric.suffix - source.js, text.ejs source.css constant.other - source.js, text.ejs source.css entity.name.tag - source.js, text.ejs source.css keyword.control - source.js, text.ejs source.css keyword.operator - source.js, text.ejs source.css keyword.other - source.js, text.ejs source.css meta.group - source.js, text.ejs source.css meta.property-name - source.js, text.ejs source.css meta.property-value.css - source.js, text.ejs source.css meta.selector - source.js, text.ejs source.css punctuation.definition.constant - source.js, text.ejs source.css punctuation.definition.entity - source.js, text.ejs source.css punctuation.definition.group - source.js, text.ejs source.css punctuation.definition.keyword.css - source.js, text.ejs source.css punctuation.section - source.js, text.ejs source.css string.quoted.double.css - source.js, text.ejs source.css string.quoted.single.css - source.js, text.ejs source.css support.constant - source.js, text.ejs source.css support.function - source.js, text.ejs source.css support.type - source.js, text.ejs string.quoted.single.html - meta.class-name.html - source.js, text.ejs string.unquoted.css - source.js, text.ejs support.type.property-name - source.js, text.ejs.percentsign constant.character - source.js, text.ejs.percentsign constant.character punctuation.definition - source.js",
+      "background": "var(blue3)",
+      "foreground": "var(blue4)",
+    },
+    {
+      "name": "EJS highlight blank text",
+      "scope": "text.ejs text.html.basic - source.js",
+      "foreground": "#f0f"
+    },
+    {
+      "scope": "text.ejs source.js",
+      "foreground": "var(white3)"
+    },
+    {
+      "scope": "text.ejs source.js meta.brace.round.begin, text.ejs source.js meta.brace.round.end, text.ejs source.js meta.brace.curly.begin, text.ejs source.js meta.brace.curly.end, text.ejs source.js meta.brace.square.begin, text.ejs source.js meta.brace.square.end, text.ejs source.js meta.group.braces.round.function.arguments",
+      "foreground": "var(blue5)"
+    }
+  ],
+}
