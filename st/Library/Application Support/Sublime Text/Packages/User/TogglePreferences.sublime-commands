@@ -1,0 +1,14 @@
+[
+  { "caption": "Line Numbers: Toggle",
+    "command": "toggle_preferences",
+    "args": { "setting": "line_numbers", "persist": true }
+  },
+  { "caption": "Gutter: Toggle",
+    "command": "toggle_preferences",
+    "args": { "setting": "gutter", "persist": true }
+  },
+  { "caption": "Relative Line Numbers: Toggle",
+    "command": "toggle_preferences",
+    "args": { "setting": "relative_line_numbers", "persist": true }
+  },
+]

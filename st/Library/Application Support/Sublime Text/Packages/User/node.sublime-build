@@ -1,0 +1,8 @@
+{
+  "selector": "source.js",
+  "file_patterns": "*.js",
+  // "shell_cmd": "tmux send -t sublime-text-build 'cd $file_path; node $file>/dev/null 2>&1 &' ENTER",
+  "shell_cmd": "node $file",
+  "quiet": true,
+}
+

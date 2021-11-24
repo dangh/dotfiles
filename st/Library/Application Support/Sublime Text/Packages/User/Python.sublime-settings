@@ -1,0 +1,8 @@
+// These settings override both User and Default settings for the Python syntax
+{
+  "draw_indent_guides": true,
+  "indent_guide_options": [
+    "solid",
+    "draw_normal",
+  ]
+}
