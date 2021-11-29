@@ -1,6 +1,6 @@
 {
-	"style": "dark",
-	"color_scheme": "Packages/sublime-github-color/OneDark.sublime-color-scheme",
+	"style": "auto",
+	"color_scheme": "auto",
 	"light_color_scheme": "Packages/sublime-github-color/GitHub.sublime-color-scheme",
 	"dark_color_scheme": "Packages/sublime-github-color/OneDark.sublime-color-scheme",
 	"dark_font_face": "PragmataPro Liga Math",
@@ -11,13 +11,11 @@
 	"dark_font_options": ["gray_antialias"],
 	"font_options":
 	[
-		"gray_antialias",
 	],
 	"light_theme_font_options": [],
 	"dark_theme_font_options": ["gray_antialias"],
 	"theme_font_options":
 	[
-		"gray_antialias",
 	],
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
@@ -31,7 +29,7 @@
 	"show_definitions": false,
 	"light_theme": "1Space-Light.sublime-theme",
 	"dark_theme": "1Space-Dark.sublime-theme",
-	"theme": "1Space-Dark.sublime-theme",
+	"theme": "auto",
 	"animation_enabled": false,
 	"index_files": false,
 	"ignored_packages":
@@ -60,7 +58,7 @@
 	"shift_tab_unindent": true,
 	"show_rel_path": true,
 	"tab_completion": false,
-	"font_face": "PragmataPro Liga Math",
-	"font_size": 14,
+	"font_face": "Code Saver",
+	"font_size": 13,
 	"vintageous_use_ctrl_keys": true,
 }

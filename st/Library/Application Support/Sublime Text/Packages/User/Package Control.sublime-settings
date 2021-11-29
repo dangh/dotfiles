@@ -10,7 +10,7 @@
 		//"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-javascript-snippets-standard",
 		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-json",
 		"https://sublime-repo.vercel.app/api/repo?url=dangh/sublime-style",
-		"https://sublime-repo.vercel.app/api/repo?url=dangh/SublimeLinter-eslint",
+		// "https://sublime-repo.vercel.app/api/repo?url=dangh/SublimeLinter-eslint",
 	],
 	"in_process_packages":
 	[

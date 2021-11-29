@@ -1,5 +1,5 @@
 {
-	"color_scope_name": "markup.inserted",
+	"color_scope_name": "region.greenish",
 	"draw_outlined": true,
 	"mark_occurrences_on_gutter": true,
 	"highlight_when_selection_is_empty": true,
