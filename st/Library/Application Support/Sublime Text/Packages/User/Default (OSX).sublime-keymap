@@ -16,10 +16,10 @@
   //   [{ "key": "setting.command_mode" }]
   // },
   //ace-jump
-  { "keys": ["ctrl+f"], "command": "ace_jump_word" },
-  { "keys": ["f"], "command": "ace_jump_word", "context":
-    [{ "key": "setting.command_mode" }]
-  },
+  // { "keys": ["ctrl+f"], "command": "ace_jump_word" },
+  // { "keys": ["f"], "command": "ace_jump_word", "context":
+  //   [{ "key": "setting.command_mode" }]
+  // },
   //disable zoom
   { "keys": ["super+-"], "command": "noop" },
   { "keys": ["super+="], "command": "noop" },

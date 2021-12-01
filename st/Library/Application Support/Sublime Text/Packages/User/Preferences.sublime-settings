@@ -41,10 +41,8 @@
 		"Vintage",
 		"Vintageous",
 	],
-	"folder_exclude_patterns":
-	[
-		".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*", "node_modules", "web"
-	],
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*", "web"],
+	"binary_file_patterns": ["node_modules/*"],
 	"relative_line_numbers": true,
 	"neovintageous_build_version": 11100,
 	"vintageous_reset_mode_when_switching_tabs": false,
@@ -61,4 +59,13 @@
 	"font_face": "Code Saver",
 	"font_size": 13,
 	"vintageous_use_ctrl_keys": true,
+	"vintageous_handle_keys": {
+		"<C-P>": false,
+	},
+	"find_selected_text": true,
+	"create_window_at_startup": false,
+	"drag_text": false,
+	"auto_find_in_selection": true,
+	"remember_full_screen": true,
+	"auto_complete_commit_on_tab": true,
 }
