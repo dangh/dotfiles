@@ -42,7 +42,7 @@
 		"Vintageous",
 	],
 	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*", "web"],
-	"binary_file_patterns": ["node_modules/*"],
+	"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip", "node_modules/*", "*.gz", "*.tgz"],
 	"relative_line_numbers": true,
 	"neovintageous_build_version": 11100,
 	"vintageous_reset_mode_when_switching_tabs": false,
