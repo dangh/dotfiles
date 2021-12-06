@@ -31,6 +31,8 @@ bootstrap() {
 	git config --global core.autocrlf 'input'
 	git config --global core.eol 'lf'
 	git config --global core.attributesfile '~/.gitattributes'
+
+	defaults write ~/Library/Preferences/com.colliderli.iina inputConfigs -dict d ~/Library/Application\ Support/com.colliderli.iina/input_conf/d.conf
 }
 
 bootstrap
