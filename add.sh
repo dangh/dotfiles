@@ -8,6 +8,10 @@ for src in "${@:2}"; do
   dst="${src/$HOME/$script_dir/$app}"
   dir="$dst:h"
   mkdir -p $dir
-  mv -v -- "$src" "$dst"
-  ln -sfv -- "$dst" "$src" | sed "s;$HOME;~;g"
+  if [[ $src = $HOME/Library/Preferences/* ]]; then
+    cp -fv -- "$dst" "$src" | sed "s;$HOME;~;g"
+  else
+    mv -v -- "$src" "$dst"
+    ln -sfv -- "$dst" "$src" | sed "s;$HOME;~;g"
+  fi
 done

@@ -8,18 +8,23 @@ bootstrap() {
 		dotfile="$dotfiles_dir/$file"
 		dotfile="$dotfile:A"
 		dotfile_dir=$(dirname $dotfile)
-		symlink="$HOME/${file#*/}"
-		symlink_dir="$symlink:h"
+		target="$HOME/${file#*/}"
+		target_dir="$target:h"
 
 		[[ "$dotfile_dir" == "$dotfiles_dir" ]] && continue
 
-		if [[ -e "$symlink" && ! -L "$symlink" ]]; then
+		if [[ -e "$target" && ! -L "$target" ]]; then
 			printf >&2 -- 'Moving non-linked %s to Trash.\n' "$f"
-			/bin/mv -v -- "$symlink" "$HOME/.Trash"
+			/bin/mv -v -- "$target" "$HOME/.Trash"
 		fi
 
-		mkdir -p "$symlink_dir"
-		ln -sfv -- "$dotfile" "$symlink" | sed "s;$HOME;~;g"
+		mkdir -p "$target_dir"
+		if [[ $target_dir/ = $HOME/Library/Preferences/* ]]; then
+			rm -f "$target" > /dev/null
+			cp -fv "$dotfile" "$target" | sed "s;$HOME;~;g"
+		else
+			ln -sfv -- "$dotfile" "$target" | sed "s;$HOME;~;g"
+		fi
 	done
 
 	git config --global core.excludesfile '~/.gitignore'
