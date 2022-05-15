@@ -1,29 +1,25 @@
 #!/usr/bin/env zsh
 
-dotfiles_dir=$(dirname "$0:A")
+dotfiles_dir=$(dirname "$0:a")
 
 bootstrap() {
-	files=$(git -C "${dotfiles_dir}" ls-files)
-	for file in ${(f)files}; do
-		dotfile="$dotfiles_dir/$file"
-		dotfile="$dotfile:A"
-		dotfile_dir=$(dirname $dotfile)
-		target="$HOME/${file#*/}"
-		target_dir="$target:h"
+	dotfiles=$(git -C "${dotfiles_dir}" ls-files)
+	for dotfile in ${(f)dotfiles}; do
+		# ignore scripts
+		[[ "$dotfile:h" = '.' ]] && continue
 
-		[[ "$dotfile_dir" == "$dotfiles_dir" ]] && continue
-
-		if [[ -e "$target" && ! -L "$target" ]]; then
-			printf >&2 -- 'Moving non-linked %s to Trash.\n' "$f"
-			/bin/mv -v -- "$target" "$HOME/.Trash"
-		fi
+		source_file="$dotfiles_dir/$dotfile"
+		source_file="$source_file:a" # resolve absolute path
+		source_dir="$source_file:h" # resolve dir name
+		target_file="$HOME/${dotfile#*/}"
+		target_dir="$target_file:h"
 
 		mkdir -p "$target_dir"
-		if [[ $target_dir/ = $HOME/Library/Preferences/* ]]; then
-			rm -f "$target" > /dev/null
-			cp -fv "$dotfile" "$target" | sed "s;$HOME;~;g"
+		rm -fv "$target_file" | sed "s;$HOME;~;g"
+		if [[ "$dotfile:e" = 'plist' ]]; then
+			cp -fv "$source_file" "$target_file" | sed "s;$HOME;~;g"
 		else
-			ln -sfv -- "$dotfile" "$target" | sed "s;$HOME;~;g"
+			ln -sfv -- "$source_file" "$target_file" | sed "s;$HOME;~;g"
 		fi
 	done
 
