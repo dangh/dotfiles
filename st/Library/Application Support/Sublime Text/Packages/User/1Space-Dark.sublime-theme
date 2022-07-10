@@ -1,12 +1,8 @@
 {
   // http://www.sublimetext.com/docs/3/themes.html
   "variables": {
-    "--font_face": "PragmataPro Liga",
+    "--font_face": "PragmataPro Liga Math",
   },
   "rules": [
-    {
-      "class": "sidebar_container",
-      "layer1.inner_margin": [0, 27, 0, 0],
-    }
   ],
 }
