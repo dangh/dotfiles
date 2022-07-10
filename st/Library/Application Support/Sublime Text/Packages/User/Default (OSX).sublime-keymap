@@ -5,6 +5,7 @@
   },
   //paste-and-indent by default
   // { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["super+option+v"], "command": "paste_and_indent" },
   { "keys": ["super+shift+r"], "command": "reveal_in_side_bar" },
   //dashdoc
   { "keys": ["f3"], "command": "dash_doc" },
