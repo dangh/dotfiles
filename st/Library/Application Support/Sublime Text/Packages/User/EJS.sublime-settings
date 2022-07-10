@@ -9,4 +9,10 @@
   "extensions": [
     "ejs"
   ],
+  "draw_indent_guides": true,
+  "indent_guide_options":
+  [
+    "draw_normal",
+    "draw_active"
+  ],
 }
