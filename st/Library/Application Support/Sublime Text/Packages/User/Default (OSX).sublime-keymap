@@ -25,6 +25,9 @@
   { "keys": ["super+="], "command": "noop" },
   //disable spelling
   { "keys": ["f6"], "command": "noop" },
+  //use normal tab order
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
   //disable vintage undo/redo
   // { "keys": ["u"], "command": "noop", "context":
   //   [{ "key": "setting.command_mode" }]
