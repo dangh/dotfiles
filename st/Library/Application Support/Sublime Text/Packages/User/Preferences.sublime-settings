@@ -4,18 +4,20 @@
 	"light_color_scheme": "Packages/sublime-github-color/GitHub.sublime-color-scheme",
 	"dark_color_scheme": "Packages/sublime-github-color/OneDark.sublime-color-scheme",
 	"dark_font_face": "PragmataPro Liga Math",
-	"light_font_face": "Code Saver",
+	"light_font_face": "PragmataPro Liga Math",
 	"dark_font_size": 14,
-	"light_font_size": 13,
+	"light_font_size": 14,
 	"light_font_options": [],
 	"dark_font_options": ["gray_antialias"],
 	"font_options":
 	[
+		"gray_antialias",
 	],
 	"light_theme_font_options": [],
 	"dark_theme_font_options": ["gray_antialias"],
 	"theme_font_options":
 	[
+		"gray_antialias",
 	],
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
@@ -34,6 +36,7 @@
 	"index_files": false,
 	"ignored_packages":
 	[
+		"Emmet",
 		"LSP",
 		"LSP-typescript",
 		"Six",
@@ -41,8 +44,8 @@
 		"Vintage",
 		"Vintageous",
 	],
-	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*", "web"],
-	"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip", "node_modules/*", "*.gz", "*.tgz"],
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*", "web", "web/coverage"],
+	"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip", "node_modules/*", "*.gz", "*.tgz", "*.xlsx", ".nuxt/*", ".serverless/*", "deploy"],
 	"relative_line_numbers": true,
 	"neovintageous_build_version": 11100,
 	"vintageous_reset_mode_when_switching_tabs": false,
@@ -54,10 +57,10 @@
 	"sublime_merge_path": null,
 	"close_windows_when_empty": false,
 	"shift_tab_unindent": true,
-	"show_rel_path": true,
+	"show_rel_path": false,
 	"tab_completion": false,
-	"font_face": "Code Saver",
-	"font_size": 13,
+	"font_face": "PragmataPro Liga Math",
+	"font_size": 14,
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_handle_keys": {
 		"<C-P>": false,
@@ -68,4 +71,7 @@
 	"auto_find_in_selection": true,
 	"remember_full_screen": true,
 	"auto_complete_commit_on_tab": true,
+	"show_full_path": true,
+	"1space.overlay_vcs_status_badge": false,
+	"draw_shadows": false,
 }

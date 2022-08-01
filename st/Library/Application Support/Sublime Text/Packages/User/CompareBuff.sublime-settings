@@ -1,0 +1,15 @@
+{
+  "external_tool_path": ["/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code", "--diff", "{0}", "{1}"],
+  "number_of_recent_items": 0,
+  "icons":
+  {
+    "enable": true,
+    "icon_ellipsis": "•••",
+    "icon_package": "",
+    "icon_recent_files": "",
+    "icon_scratch_file": "",
+    "icon_valid_file": "",
+    "icon_window": "",
+  },
+  "show_in_context_menu": false,
+}
