@@ -30,6 +30,7 @@ everforest_dark_hard: &everforest_dark_hard
   primary:
     foreground: *fg
     background: *bg0
+    dim_foreground: *bg4
   search:
     #Search
     matches:
