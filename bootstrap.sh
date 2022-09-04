@@ -29,6 +29,8 @@ bootstrap() {
 	git config --global core.attributesfile '~/.gitattributes'
 
 	defaults write ~/Library/Preferences/com.colliderli.iina inputConfigs -dict d ~/Library/Application\ Support/com.colliderli.iina/input_conf/d.conf
+
+	defaults write org.alacritty AppleFontSmoothing -int 0
 }
 
 bootstrap

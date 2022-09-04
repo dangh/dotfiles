@@ -40,7 +40,7 @@ everforest_dark_soft: &everforest_dark_soft
       foreground: *bg0
       background: *red
     #StatusLine
-    bar:
+    footer_bar:
       foreground: *grey1
       background: *bg1
   hints:

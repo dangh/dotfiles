@@ -40,7 +40,7 @@ everforest_light_medium: &everforest_light_medium
       foreground: *bg0
       background: *red
     #StatusLine
-    bar:
+    footer_bar:
       foreground: *grey1
       background: *bg1
   hints:

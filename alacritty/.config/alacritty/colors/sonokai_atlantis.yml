@@ -37,7 +37,7 @@ sonokai_atlantis: &sonokai_atlantis
       foreground: *bg0
       background: *bg_red
     #StatusLineNC
-    bar:
+    footer_bar:
       foreground: *grey
       background: *bg1
   hints:

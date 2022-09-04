@@ -41,7 +41,7 @@ everforest_dark_hard: &everforest_dark_hard
       foreground: *bg0
       background: *red
     #StatusLine
-    bar:
+    footer_bar:
       foreground: *grey1
       background: *bg1
   hints:

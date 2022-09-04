@@ -39,7 +39,7 @@ edge_dark_neon: &edge_dark_neon
       foreground: *bg0
       background: *bg_blue
     #StatusLineNC
-    bar:
+    footer_bar:
       foreground: *grey
       background: *bg1
   hints:
