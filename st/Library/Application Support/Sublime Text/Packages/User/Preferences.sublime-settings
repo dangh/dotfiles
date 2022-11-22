@@ -75,5 +75,9 @@
 	"auto_complete_commit_on_tab": true,
 	"show_full_path": true,
 	"1space.overlay_vcs_status_badge": false,
+	"1space.show_sidebar_icons_dark": true,
+	"1space.show_sidebar_icons_light": false,
+	"1space.show_disclosure_button_dark": false,
+	"1space.show_disclosure_button_light": true,
 	"draw_shadows": false,
 }
