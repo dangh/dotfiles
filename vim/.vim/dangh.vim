@@ -66,86 +66,6 @@ endfunction
 
 ": }}}
 
-": AutoPlug {{{
-
-function! PlugDir(name) abort
-	if has('nvim')
-		return expand('~/.local/share/nvim/site/pack/plugged/opt/').a:name
-	else
-		return expand('~/.vim/pack/plugged/opt/').a:name
-	endif
-endfunction
-
-function! Plug(repo, ...) abort
-	let url = 'https://github.com/'.a:repo
-	let opt = {
-				\'as':fnamemodify(a:repo, ':t'),
-				\'branch':'master',
-				\}
-	if a:0 == 1
-		call extend(opt, a:1)
-	endif
-	let name = opt.as
-	let branch = opt.branch
-	let dir = PlugDir(name)
-	let do_postinstall = 0
-	if !isdirectory(dir)
-		echomsg '['.a:repo.'] installing... '
-		call system('git clone -q --depth 1 --single-branch --branch '.branch.' '.url.' '.dir)
-		echon 'done'
-		let do_postinstall = 1
-	endif
-	execute 'packadd '.name
-	if do_postinstall
-		if isdirectory(dir.'/doc')
-			silent! execute 'helptags ++t '.dir.'/doc'
-		endif
-		if has_key(opt, 'do')
-			echomsg '['.a:repo.'] running post-install hook... '
-			execute 'cd '.dir
-			let type = type(opt.do)
-			if type == v:t_string
-				if opt.do[0] == ':'
-					execute opt.do[1:]
-				else
-					execute '!'.opt.do
-				endif
-			elseif type == v:t_func
-				call opt.do({ 'status': 'installed' })
-			endif
-			cd -
-			echon 'done'
-		endif
-	endif
-endfunction
-
-function! PlugUpdate(...) abort
-	let repos = [0]
-	if a:0 > 0
-		let repos = map(copy(a:000), { _, val -> PlugDir(fnamemodify(val, ':t')) })
-	else
-		let repos = glob(PlugDir('*'), v:false, v:true)
-	endif
-	for dir in repos
-		execute 'cd '.dir
-		let url = systemlist('git remote get-url origin')[0]
-		let repo = matchstr(url, '[^/]\+/[^/]\+$')
-		echomsg '['.repo.'] updating... '
-		execute 'cd '.dir
-		call system('git pull --depth 1')
-		cd -
-		echon 'done'
-		if isdirectory(dir.'/doc')
-			silent! execute 'helptags ++t '.dir.'/doc'
-		endif
-	endfor
-endfunction
-
-command! -nargs=+ Plug :call Plug(<args>)
-command! -complete=packadd -nargs=* PlugUpdate :call PlugUpdate(<args>)
-
-": }}}
-
 ": General config {{{
 
 if ENV('truecolor')
@@ -206,11 +126,13 @@ if ENV('tmux')
 	set title titlestring=@vim@%{expand('%:p')}
 endif
 
+set guifont=PragmataPro\ Liga\ Math:h14
+
 ": }}}
 
 ": Colorscheme {{{
 
-Plug 'sainnhe/everforest'
+" Plug 'sainnhe/everforest'
 
 let g:everforest_enable_italic = 1
 let g:everforest_disable_italic_comment = 0
@@ -515,3 +437,10 @@ nnoremap <silent>  # :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchf
 nnoremap <silent> g* :let @/='\C'   . expand('<cword>')       <CR>:let v:searchforward=1<CR>n
 nnoremap <silent> g# :let @/='\C'   . expand('<cword>')       <CR>:let v:searchforward=0<CR>n
 
+if exists('g:neovide')
+	let g:neovide_transparency=0
+	let g:transparency=0.9
+	let g:neovide_floating_blur_amount_x=2
+	let g:neovide_floating_blur_amount_y=2
+	let g:neovide_background_color = '#0f1117'.printf('%x', float2nr(255 * g:transparency))
+end
