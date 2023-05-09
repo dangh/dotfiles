@@ -47,6 +47,10 @@ set-option -g   @symbol_cwin_left      "#{s|.* #{?@user_symbol_cwin_left,#{E:@us
 set-option -g   @symbol_cwin_right     "#{s|.* #{?@user_symbol_cwin_right,#{E:@user_symbol_cwin_right},#{E:@theme_symbol_cwin_right}} +([^ ]+) .*|\\1|r:#{E:@symbols}}"
 set-option -g   @symbol_win_left       "#{s|.* #{?@user_symbol_win_left,#{E:@user_symbol_win_left},#{E:@theme_symbol_win_left}} +([^ ]+) .*|\\1|r:#{E:@symbols}}"
 set-option -g   @symbol_win_right      "#{s|.* #{?@user_symbol_win_right,#{E:@user_symbol_win_right},#{E:@theme_symbol_win_right}} +([^ ]+) .*|\\1|r:#{E:@symbols}}"
+set-option -g   @symbol_apane_left     "#{s|.* #{?@user_symbol_apane_left,#{E:@user_symbol_apane_left},#{E:@theme_symbol_apane_left}} +([^ ]+) .*|\\1|r:#{E:@symbols}}"
+set-option -g   @symbol_apane_right    "#{s|.* #{?@user_symbol_apane_right,#{E:@user_symbol_apane_right},#{E:@theme_symbol_apane_right}} +([^ ]+) .*|\\1|r:#{E:@symbols}}"
+set-option -g   @symbol_pane_left      "#{s|.* #{?@user_symbol_pane_left,#{E:@user_symbol_pane_left},#{E:@theme_symbol_pane_left}} +([^ ]+) .*|\\1|r:#{E:@symbols}}"
+set-option -g   @symbol_pane_right     "#{s|.* #{?@user_symbol_pane_right,#{E:@user_symbol_pane_right},#{E:@theme_symbol_pane_right}} +([^ ]+) .*|\\1|r:#{E:@symbols}}"
 set-option -g   @fg                    "#{?@user_fg,#{E:@user_fg},#{E:@theme_fg}}"
 set-option -g   @bg                    "#{?@user_bg,#{E:@user_bg},#{E:@theme_bg}}"
 set-option -g   @fg_a                  "#{?@user_fg_a,#{E:@user_fg_a},#{E:@theme_fg_a}}"
@@ -73,6 +77,10 @@ set-option -g   @fg_cwin               "#{?@user_fg_cwin,#{E:@user_fg_cwin},#{E:
 set-option -g   @bg_cwin               "#{?@user_bg_cwin,#{E:@user_bg_cwin},#{E:@theme_bg_cwin}}"
 set-option -g   @fg_cwin_alt           "#{?@user_fg_cwin_alt,#{E:@user_fg_cwin_alt},#{E:@theme_fg_cwin_alt}}"
 set-option -g   @bg_cwin_alt           "#{?@user_bg_cwin_alt,#{E:@user_bg_cwin_alt},#{E:@theme_bg_cwin_alt}}"
+set-option -g   @fg_pane               "#{?@user_fg_pane,#{E:@user_fg_pane},#{E:@theme_fg_pane}}"
+set-option -g   @bg_pane               "#{?@user_bg_pane,#{E:@user_bg_pane},#{E:@theme_bg_pane}}"
+set-option -g   @fg_apane              "#{?@user_fg_apane,#{E:@user_fg_apane},#{E:@theme_fg_apane}}"
+set-option -g   @bg_apane              "#{?@user_bg_apane,#{E:@user_bg_apane},#{E:@theme_bg_apane}}"
 #: }}}
 #: Contents {{{
 set-option -g   @content_a_default  "#{session_name}"
@@ -119,6 +127,12 @@ set-option -g   @format_cwin_center     "#[fg=#{E:@fg_cwin},bg=#{E:@bg_cwin}]"
 set-option -g   @format_cwin_left_alt   "#[fg=#{E:@bg_cwin_alt},nobold,nounderscore,noitalics]#[push-default]"
 set-option -g   @format_cwin_right_alt  "#[default]"
 set-option -g   @format_cwin_center_alt "#[fg=#{E:@fg_cwin_alt},bg=#{E:@bg_cwin_alt}]"
+set-option -g   @format_pane_left       "#[fg=#{E:@bg_pane},nobold,nounderscore,noitalics]#[push-default]"
+set-option -g   @format_pane_right      "#[default]"
+set-option -g   @format_pane_center     "#[fg=#{E:@fg_pane},bg=#{E:@bg_pane}]"
+set-option -g   @format_apane_left      "#[fg=#{E:@bg_apane},nobold,nounderscore,noitalics]#[push-default]"
+set-option -g   @format_apane_right     "#[default]"
+set-option -g   @format_apane_center    "#[fg=#{E:@fg_apane},bg=#{E:@bg_apane}]"
 #: }}}
 #: Helpers {{{
 set-option -wg  @before_cwin        "#{>:0,#{e|-|:#{window_index},#{active_window_index}}}"
@@ -141,6 +155,9 @@ set-option -wga @pane_current_path_styled   "s|//|/|;"
 set-option -wga @pane_current_path_styled   "s|[^/]+$|#[bold]\\0#[nobold]|:"
 set-option -wga @pane_current_path_styled     "#{E:@pane_current_path}"
 set-option -wga @pane_current_path_styled "}"
+#: }}}
+#: Styled pane title {{{
+set-option -wg  @pane_title_styled "#{?@pane_title,#{E:@pane_title},#{E:@pane_current_path_styled}}"
 #: }}}
 #: Styled window index {{{
 set-option -wg  @window_index_fwid ""
@@ -254,5 +271,29 @@ set-option -wga window-status-current-format     " "
 set-option -wga window-status-current-format   "#{E:@format_cwin_right}"
 set-option -wga window-status-current-format     "#{E:@symbol_cwin_right}"
 set-option -wga window-status-current-format "}"
+set-option -wg  pane-border-status top
+set-option -wg  pane-border-format ""
+set-option -wga pane-border-format "#{?pane_active,"
+set-option -wga pane-border-format   "#{E:@format_apane_left}"
+set-option -wga pane-border-format     "#{E:@symbol_apane_left}"
+set-option -wga pane-border-format   "#{E:@format_apane_center}"
+set-option -wga pane-border-format     " "
+set-option -wga pane-border-format     "#{E:@pane_title_styled}"
+set-option -wga pane-border-format     "#{E:@window_zoomed_icon}"
+set-option -wga pane-border-format     " "
+set-option -wga pane-border-format   "#{E:@format_apane_right}"
+set-option -wga pane-border-format     "#{E:@symbol_apane_right}"
+set-option -wga pane-border-format   ","
+set-option -wga pane-border-format   "#{E:@format_pane_left}"
+set-option -wga pane-border-format     "#{E:@symbol_pane_left}"
+set-option -wga pane-border-format   "#{E:@format_pane_center}"
+set-option -wga pane-border-format     " "
+set-option -wga pane-border-format     "#{E:@pane_title_styled}"
+set-option -wga pane-border-format     " "
+set-option -wga pane-border-format   "#{E:@format_pane_right}"
+set-option -wga pane-border-format     "#{E:@symbol_pane_right}"
+set-option -wga pane-border-format "}"
 #: }}}
 #: }}}
+
+set-option -g status-interval 1

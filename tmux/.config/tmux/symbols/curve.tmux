@@ -8,3 +8,7 @@ set-option -g @theme_symbol_cwin_left  circle-left-solid
 set-option -g @theme_symbol_cwin_right circle-right-solid
 set-option -g @theme_symbol_win_left   circle-left-solid
 set-option -g @theme_symbol_win_right  circle-right-solid
+set-option -g @theme_symbol_apane_left  circle-left-solid
+set-option -g @theme_symbol_apane_right circle-right-solid
+set-option -g @theme_symbol_pane_left   circle-left-solid
+set-option -g @theme_symbol_pane_right  circle-right-solid
