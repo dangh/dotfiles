@@ -477,7 +477,7 @@ set-option -ga  @active_pane_status_center_style " #{s|^[^\S]+\\|[^\S]+$||g;s|.+
 set-option -ga  @active_pane_status_center_style " #{s|^[^\S]+\\|[^\S]+$||g;s|.+|bg=\\0|:#{T:@active_pane_status_bg}}"
 set-option -ga  @active_pane_status_center_style "]"
 set-option -g   @pane_status_content " "
-set-option -ga  @pane_status_content " #{T:@pane_index_fwid}. "
+set-option -ga  @pane_status_content "#{T:@pane_index_fwid}. "
 set-option -ga  @pane_status_content "#{?@pane_title,"
 set-option -ga  @pane_status_content   "＄ #{T:@pane_title},"
 set-option -ga  @pane_status_content   "  #{T:@pane_current_path_styled}"
