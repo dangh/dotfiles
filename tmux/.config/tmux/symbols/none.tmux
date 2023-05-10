@@ -1,10 +1,16 @@
-set-option -gU @theme_symbol_ab
-set-option -gU @theme_symbol_bc
-set-option -gU @theme_symbol_cc
-set-option -gU @theme_symbol_xx
-set-option -gU @theme_symbol_xy
-set-option -gU @theme_symbol_yz
-set-option -gU @theme_symbol_cwin_left
-set-option -gU @theme_symbol_cwin_right
-set-option -gU @theme_symbol_win_left
-set-option -gU @theme_symbol_win_right
+set-option -g @status_left_ab_symbol             ""
+set-option -g @status_left_bc_symbol             ""
+set-option -g @status_left_cc_symbol             ""
+set-option -g @status_right_xx_symbol            ""
+set-option -g @status_right_xy_symbol            ""
+set-option -g @status_right_yz_symbol            ""
+set-option -g @prev_window_status_left_symbol    ""
+set-option -g @prev_window_status_right_symbol   ""
+set-option -g @next_window_status_left_symbol    ""
+set-option -g @next_window_status_right_symbol   ""
+set-option -g @active_window_status_left_symbol  ""
+set-option -g @active_window_status_right_symbol ""
+set-option -g @pane_status_left_symbol           ""
+set-option -g @pane_status_right_symbol          ""
+set-option -g @active_pane_status_left_symbol    ""
+set-option -g @active_pane_status_right_symbol   ""

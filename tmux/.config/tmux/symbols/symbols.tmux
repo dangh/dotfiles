@@ -13,5 +13,22 @@ set-option -ga @symbols " &slope-down-solid-inverse =  "
 set-option -ga @symbols " &slope-up                 =  "
 set-option -ga @symbols " &slope-up-solid           =  "
 set-option -ga @symbols " &slope-up-solid-inverse   =  "
-set-option -ga @symbols " &stair-down               = ▙ "
-set-option -ga @symbols " &stair-up                 = ▟ "
+
+# clockwise
+# 4 1
+# 3 2
+
+set-option -ga @symbols " &block-1                  = ▝ "
+set-option -ga @symbols " &block-2                  = ▗ "
+set-option -ga @symbols " &block-3                  = ▖ "
+set-option -ga @symbols " &block-4                  = ▘ "
+set-option -ga @symbols " &block-12                 = ▐ "
+set-option -ga @symbols " &block-23                 = ▄ "
+set-option -ga @symbols " &block-34                 = ▌ "
+set-option -ga @symbols " &block-41                 = ▀ "
+set-option -ga @symbols " &block-13                 = ▞ "
+set-option -ga @symbols " &block-24                 = ▚ "
+set-option -ga @symbols " &block-123                = ▟ "
+set-option -ga @symbols " &block-234                = ▙ "
+set-option -ga @symbols " &block-341                = ▛ "
+set-option -ga @symbols " &block-412                = ▜ "
