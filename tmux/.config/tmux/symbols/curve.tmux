@@ -10,7 +10,7 @@ set-option -g @next_window_status_left_symbol    " "
 set-option -g @next_window_status_right_symbol   circle-right
 set-option -g @active_window_status_left_symbol  circle-left-solid
 set-option -g @active_window_status_right_symbol circle-right-solid
-set-option -g @theme_symbol_apane_left  circle-left-solid
-set-option -g @theme_symbol_apane_right circle-right-solid
-set-option -g @theme_symbol_pane_left   circle-left-solid
-set-option -g @theme_symbol_pane_right  circle-right-solid
+set-option -g @pane_status_left_symbol           circle-left
+set-option -g @pane_status_right_symbol          circle-right
+set-option -g @active_pane_status_left_symbol    circle-left-solid
+set-option -g @active_pane_status_right_symbol   circle-right-solid
