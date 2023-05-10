@@ -13,13 +13,10 @@ set-option -ga  pane-border-style             " #{s|^[^\\S]+\\|[^\\S]+$||g;s|.+|
 set-option -g   pane-active-border-style      " #{s|^[^\\S]+\\|[^\\S]+$||g;s|.+|fg=\\0|:#{T:@active_pane_border_fg}}"
 set-option -ga  pane-active-border-style      " #{s|^[^\\S]+\\|[^\\S]+$||g;s|.+|bg=\\0|:#{T:@active_pane_border_bg}}"
 
-#: Variables {{{
-set-option -g   @fg                    "#{?@user_fg,#{T:@user_fg},#{T:@theme_fg}}"
-set-option -g   @bg                    "#{?@user_bg,#{T:@user_bg},#{T:@theme_bg}}"
-#: }}}
 #: Helpers {{{
 set-option -wg  @before_active_window        "#{>:0,#{e|-|:#{window_index},#{active_window_index}}}"
 set-option -wg  @after_active_window         "#{<:0,#{e|-|:#{window_index},#{active_window_index}}}"
+set-option -wg  @window_renamed "#{!=:#{window_name},}"
 #: }}}
 #: Styled pane current path {{{
 set-option -wg  @pane_current_path ""
@@ -58,25 +55,24 @@ set-option -wga @window_index_fwid "}"
 #: Styled window flags {{{
 set-option -g   @window_flags_fwid ""
 set-option -ga  @window_flags_fwid "#{"
-set-option -ga  @window_flags_fwid   "s|#|＃|;"
-set-option -ga  @window_flags_fwid   "s|!|！|;"
-set-option -ga  @window_flags_fwid   "s|~|～|;"
-set-option -ga  @window_flags_fwid   "s|*|＊|;"
-set-option -ga  @window_flags_fwid   "s|-|－|;"
-set-option -ga  @window_flags_fwid   "s|M|Ｍ|;"
-set-option -ga  @window_flags_fwid   "s|Z|Ｚ|;"
+set-option -ga  @window_flags_fwid   "s|#|＃|;" # window activity
+set-option -ga  @window_flags_fwid   "s|!|！|;" # window bell
+set-option -ga  @window_flags_fwid   "s|~|～|;" # window silence
+set-option -ga  @window_flags_fwid   "s|\\*|＊|;" # current window
+set-option -ga  @window_flags_fwid   "s|-|－|;" # last window
+set-option -ga  @window_flags_fwid   "s|M|Ｍ|;" # window marked
+set-option -ga  @window_flags_fwid   "s|Z|Ｚ|;" # window zoomed
 set-option -ga  @window_flags_fwid   ":window_raw_flags"
 set-option -ga  @window_flags_fwid "}"
 set-option -g   @window_zoomed_icon "#{?window_zoomed_flag,  ,}"
 set-option -wg  automatic-rename-format ""
-set-option -wg  @window_renamed "#{!=:#{window_name},}"
 #: }}}
 #: Format status line {{{
 set-option -g   status on
 set-option -g   status-left-length 100
 set-option -g   status-right-length 100
 set-option -g   status-justify absolute-centre
-set-option -gF  status-style "none,bg=#{T:@bg}"
+set-option -gF  status-style "#{s|^[^\\S]+\\|[^\\S]+$||g;s|.+|bg=\\0|:#{T:@status_bg}}"
 set-option -gF  status-left-style none
 set-option -gF  status-right-style none
 set-option -gF  window-status-activity-style none

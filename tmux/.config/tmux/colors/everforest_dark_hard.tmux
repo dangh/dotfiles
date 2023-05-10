@@ -24,8 +24,7 @@ set-option -g @palette_statusline1           "#a7c080"
 set-option -g @palette_statusline2           "#d3c6aa"
 set-option -g @palette_statusline3           "#e67e80"
 
-set-option -g @theme_fg                      "#{E:@palette_grey1}"
-set-option -g @theme_bg                      "#{E:@palette_bg1}"
+set-option -g @status_bg                     "#{E:@palette_bg1}"
 
 set-option -g @search_match_fg               "#{E:@palette_bg0}"
 set-option -g @search_match_bg               "#{E:@palette_green}"
