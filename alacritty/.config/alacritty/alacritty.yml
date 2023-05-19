@@ -26,12 +26,14 @@ import:
 window:
   decorations: none
   startup_mode: Maximized
+  padding:
+    x: 8 #padding for slack sharescreen overlay border
   dynamic_padding: true
 font:
   normal:
     #font patched with https://github.com/twardoch/fonttools-opentype-feature-freezer
     family: PragmataPro Liga Math
-  size: 14
+  size: 15
   glyph_offset:
     #for PragmataPro font
     y: 1

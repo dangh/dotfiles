@@ -1,6 +1,6 @@
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[ packadd packer.nvim ]]
@@ -12,14 +12,19 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-
   use 'wbthomason/packer.nvim'
 
-  -- use 'sainnhe/everforest'
+  -- use 'neanias/everforest-nvim'
+  use {
+    'sainnhe/everforest',
+    run = function()
+      vim.cmd [[ colorscheme everforest ]]
+    end
+  }
 
-  -- use 'navarasu/onedark.nvim'
+  -- use { 'navarasu/onedark.nvim', opt = true }
 
-  use { 'rose-pine/neovim', as = 'rose-pine' }
+  -- use { 'rose-pine/neovim', as = 'rose-pine', opt = true }
 
   use 'f-person/auto-dark-mode.nvim'
 
@@ -54,5 +59,4 @@ return require('packer').startup(function(use)
   if packer_bootstrap then
     require('packer').sync()
   end
-
 end)
