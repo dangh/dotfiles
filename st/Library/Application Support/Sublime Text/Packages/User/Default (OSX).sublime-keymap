@@ -106,9 +106,10 @@
   { "keys": ["alt+k"], "command": "move", "args": {"by": "lines", "forward": false}},
   { "keys": ["alt+h"], "command": "move", "args": {"by": "characters", "forward": false}},
   { "keys": ["alt+l"], "command": "move", "args": {"by": "characters", "forward": true}},
-  //disable escape to hide panel
+  //prevent close unfocused output panel on Escape
   { "keys": ["escape"], "command": "pass", "args": {"cancel": true}, "context": [
     { "key": "panel_visible", "operator": "equal", "operand": true },
     { "key": "panel_has_focus", "operator": "equal", "operand": false },
+    { "key": "panel_type", "operand": "output"},
   ]}
 ]
