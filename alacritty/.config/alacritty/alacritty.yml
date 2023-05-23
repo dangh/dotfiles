@@ -3,31 +3,33 @@ SHELL: &SHELL /bin/dash
 TMUX: &TMUX /opt/homebrew/bin/tmux
 
 import:
-  #- ~/.config/alacritty/colors/edge_dark.yml
-  #- ~/.config/alacritty/colors/edge_dark_aura.yml
-  #- ~/.config/alacritty/colors/edge_dark_neon.yml
-  #- ~/.config/alacritty/colors/edge_light.yml
-  - ~/.config/alacritty/colors/everforest_dark_hard.yml
-  #- ~/.config/alacritty/colors/everforest_dark_medium.yml
-  #- ~/.config/alacritty/colors/everforest_dark_soft.yml
-  #- ~/.config/alacritty/colors/everforest_light_hard.yml
-  #- ~/.config/alacritty/colors/everforest_light_medium.yml
-  #- ~/.config/alacritty/colors/everforest_light_soft.yml
-  #- ~/.config/alacritty/colors/rose-pine.yml
-  #- ~/.config/alacritty/colors/rose-pine-dawn.yml
-  #- ~/.config/alacritty/colors/rose-pine-moon.yml
-  #- ~/.config/alacritty/colors/sonokai.yml
-  #- ~/.config/alacritty/colors/sonokai_andromeda.yml
-  #- ~/.config/alacritty/colors/sonokai_atlantis.yml
-  #- ~/.config/alacritty/colors/sonokai_espresso.yml
-  #- ~/.config/alacritty/colors/sonokai_maia.yml
-  #- ~/.config/alacritty/colors/sonokai_shusia.yml
+  # - ~/.config/alacritty/colors/edge_dark.yml
+  # - ~/.config/alacritty/colors/edge_dark_aura.yml
+  # - ~/.config/alacritty/colors/edge_dark_neon.yml
+  # - ~/.config/alacritty/colors/edge_light.yml
+  # - ~/.config/alacritty/colors/everforest_dark_hard.yml
+  # - ~/.config/alacritty/colors/everforest_dark_medium.yml
+  # - ~/.config/alacritty/colors/everforest_dark_soft.yml
+  # - ~/.config/alacritty/colors/everforest_light_hard.yml
+  # - ~/.config/alacritty/colors/everforest_light_medium.yml
+  # - ~/.config/alacritty/colors/everforest_light_soft.yml
+  # - ~/.config/alacritty/colors/rose-pine-dawn.yml
+  # - ~/.config/alacritty/colors/rose-pine-moon.yml
+  # - ~/.config/alacritty/colors/rose-pine.yml
+  # - ~/.config/alacritty/colors/solarized_dark.yml
+  - ~/.config/alacritty/colors/solarized_light.yml
+  # - ~/.config/alacritty/colors/sonokai.yml
+  # - ~/.config/alacritty/colors/sonokai_andromeda.yml
+  # - ~/.config/alacritty/colors/sonokai_atlantis.yml
+  # - ~/.config/alacritty/colors/sonokai_espresso.yml
+  # - ~/.config/alacritty/colors/sonokai_maia.yml
+  # - ~/.config/alacritty/colors/sonokai_shusia.yml
 
 window:
   decorations: none
   startup_mode: Maximized
   padding:
-    x: 8 #padding for slack sharescreen overlay border
+    x: 2 #padding for slack sharescreen overlay border
   dynamic_padding: true
 font:
   normal:

@@ -1,0 +1,75 @@
+palette:
+  base03:  &brblack   '#002b36'
+  base02:  &black     '#073642'
+  base01:  &brgreen   '#586e75'
+  base00:  &bryellow  '#657b83'
+  base0:   &brblue    '#839496'
+  base1:   &brcyan    '#93a1a1'
+  base2:   &white     '#eee8d5'
+  base3:   &brwhite   '#fdf6e3'
+  yellow:  &yellow    '#b58900'
+  orange:  &brred     '#cb4b16'
+  red:     &red       '#dc322f'
+  magenta: &magenta   '#d33682'
+  violet:  &brmagenta '#6c71c4'
+  blue:    &blue      '#268bd2'
+  cyan:    &cyan      '#2aa198'
+  green:   &green     '#859900'
+
+solarized_light: &solarized_light
+  #Normal
+  primary:
+    foreground: *bryellow
+    background: *brwhite
+    dim_foreground: *white
+  # search:
+  #   #Search
+  #   matches:
+  #     foreground: *bg0
+  #     background: *green
+  #   #IncSearch
+  #   focused_match:
+  #     foreground: *bg0
+  #     background: *red
+  #   #StatusLine
+  #   footer_bar:
+  #     foreground: *grey1
+  #     background: *bg1
+  # hints:
+  #   #IncSearch
+  #   start:
+  #     foreground: *bg0
+  #     background: *red
+  #   #Search
+  #   end:
+  #     foreground: *bg0
+  #     background: *green
+  # #ToolbarButton
+  # line_indicator:
+  #   foreground: *bg0
+  #   background: *green
+  # #Visual
+  # selection:
+  #   foreground: CellForeground
+  #   background: *bg_visual
+  #Terminal
+  normal:
+    black:   *black
+    red:     *red
+    green:   *green
+    yellow:  *yellow
+    blue:    *blue
+    magenta: *magenta
+    cyan:    *cyan
+    white:   *white
+  bright:
+    black:   *brblack
+    red:     *brred
+    green:   *brgreen
+    yellow:  *bryellow
+    blue:    *brblue
+    magenta: *brmagenta
+    cyan:    *brcyan
+    white:   *brwhite
+
+colors: *solarized_light
