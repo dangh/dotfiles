@@ -1,4 +1,5 @@
 set-option -g  @symbols ""
+set-option -ga @symbols " &none                = \n "
 set-option -ga @symbols " &arrow-left-stroke   =  "
 set-option -ga @symbols " &arrow-left          =  "
 set-option -ga @symbols " &arrow-right-stroke  =  "
