@@ -96,6 +96,10 @@ key_bindings:
   - { mods: Control, key: Key7, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_7}')" ] } }
   - { mods: Control, key: Key8, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_8}')" ] } }
   - { mods: Control, key: Key9, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_9}')" ] } }
+  - { mods: Command, key: LBracket, command: { program: *TMUX, args: [ select-window, -p ] } }
+  - { mods: Command, key: RBracket, command: { program: *TMUX, args: [ select-window, -n ] } }
+  - { mods: Command|Shift, key: LBracket, command: { program: *TMUX, args: [ switch-client, -p ] } }
+  - { mods: Command|Shift, key: RBracket, command: { program: *TMUX, args: [ switch-client, -n ] } }
   - { mods: Command|Control, key: F, command: { program: *TMUX, args: [ resize-pane, -Z ] } }
   #tmux: session manager
   - { mods: Command, key: N, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux new-session -dP)" ] } }
