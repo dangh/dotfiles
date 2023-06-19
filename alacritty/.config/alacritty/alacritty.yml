@@ -86,6 +86,7 @@ key_bindings:
   - { mods: Command, key: Key7, command: { program: *TMUX, args: [ select-window, -t 7 ] } }
   - { mods: Command, key: Key8, command: { program: *TMUX, args: [ select-window, -t 8 ] } }
   - { mods: Command, key: Key9, command: { program: *TMUX, args: [ select-window, -t 9 ] } }
+  - { mods: Control, key: Key0, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_0}')" ] } }
   - { mods: Control, key: Key1, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_1}')" ] } }
   - { mods: Control, key: Key2, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_2}')" ] } }
   - { mods: Control, key: Key3, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_3}')" ] } }

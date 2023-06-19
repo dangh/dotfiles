@@ -98,6 +98,7 @@ set-option -g @session_6 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+
 set-option -g @session_7 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\7|:#{S:\n#{session_name}}\n}"
 set-option -g @session_8 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\8|:#{S:\n#{session_name}}\n}"
 set-option -g @session_9 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\9|:#{S:\n#{session_name}}\n}"
+set-option -g @session_0 "#{s|.*\n([^\n]+)|\\1|:#{S:\n#{session_name}}}"
 #: }}}
 
 #: Styled window index {{{
