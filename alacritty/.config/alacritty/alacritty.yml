@@ -86,16 +86,15 @@ key_bindings:
   - { mods: Command, key: Key7, command: { program: *TMUX, args: [ select-window, -t 7 ] } }
   - { mods: Command, key: Key8, command: { program: *TMUX, args: [ select-window, -t 8 ] } }
   - { mods: Command, key: Key9, command: { program: *TMUX, args: [ select-window, -t 9 ] } }
-  - { mods: Control, key: Key0, command: { program: *TMUX, args: [ select-pane, -t 0 ] } }
-  - { mods: Control, key: Key1, command: { program: *TMUX, args: [ select-pane, -t 1 ] } }
-  - { mods: Control, key: Key2, command: { program: *TMUX, args: [ select-pane, -t 2 ] } }
-  - { mods: Control, key: Key3, command: { program: *TMUX, args: [ select-pane, -t 3 ] } }
-  - { mods: Control, key: Key4, command: { program: *TMUX, args: [ select-pane, -t 4 ] } }
-  - { mods: Control, key: Key5, command: { program: *TMUX, args: [ select-pane, -t 5 ] } }
-  - { mods: Control, key: Key6, command: { program: *TMUX, args: [ select-pane, -t 6 ] } }
-  - { mods: Control, key: Key7, command: { program: *TMUX, args: [ select-pane, -t 7 ] } }
-  - { mods: Control, key: Key8, command: { program: *TMUX, args: [ select-pane, -t 8 ] } }
-  - { mods: Control, key: Key9, command: { program: *TMUX, args: [ select-pane, -t 9 ] } }
+  - { mods: Control, key: Key1, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_1}')" ] } }
+  - { mods: Control, key: Key2, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_2}')" ] } }
+  - { mods: Control, key: Key3, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_3}')" ] } }
+  - { mods: Control, key: Key4, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_4}')" ] } }
+  - { mods: Control, key: Key5, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_5}')" ] } }
+  - { mods: Control, key: Key6, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_6}')" ] } }
+  - { mods: Control, key: Key7, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_7}')" ] } }
+  - { mods: Control, key: Key8, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_8}')" ] } }
+  - { mods: Control, key: Key9, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_9}')" ] } }
   - { mods: Command|Control, key: F, command: { program: *TMUX, args: [ resize-pane, -Z ] } }
   #tmux: session manager
   - { mods: Command, key: N, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux new-session -dP)" ] } }

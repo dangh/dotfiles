@@ -77,6 +77,18 @@ set-option -ga  @session_index_fwid_name "#{E:@session_index_fwid}"
 set-option -ga  @session_index_fwid_name "#{?#{m|r:^[0-9]+$,#{session_name}},,. #[bold]#{session_name}}"
 #: }}}
 
+#: Session name by index {{{
+set-option -g @session_1 "#{s|^\n([^\n]+).*|\\1|:#{S:\n#{session_name}}\n}"
+set-option -g @session_2 "#{s|^\n([^\n]+)\n([^\n]+).*|\\2|:#{S:\n#{session_name}}\n}"
+set-option -g @session_3 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\3|:#{S:\n#{session_name}}\n}"
+set-option -g @session_4 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\4|:#{S:\n#{session_name}}\n}"
+set-option -g @session_5 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\5|:#{S:\n#{session_name}}\n}"
+set-option -g @session_6 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\6|:#{S:\n#{session_name}}\n}"
+set-option -g @session_7 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\7|:#{S:\n#{session_name}}\n}"
+set-option -g @session_8 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\8|:#{S:\n#{session_name}}\n}"
+set-option -g @session_9 "#{s|^\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+)\n([^\n]+).*|\\9|:#{S:\n#{session_name}}\n}"
+#: }}}
+
 #: Styled window index {{{
 set-option -wg  @window_index_fwid ""
 set-option -wga @window_index_fwid "#{"
