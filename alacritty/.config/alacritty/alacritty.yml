@@ -102,7 +102,7 @@ key_bindings:
   - { mods: Command|Shift, key: W, command: { program: *TMUX, args: [ kill-session ] } }
   - { mods: Control, key: Tab, command: { program: *TMUX, args: [ switch-client, -n ] } }
   - { mods: Control|Shift, key: Tab, command: { program: *TMUX, args: [ switch-client, -p ] } }
-  - { mods: Command|Shift, key: P, command: { program: *TMUX, args: [ choose-tree, -Zs ] } }
+  - { mods: Command|Shift, key: P, command: { program: *TMUX, args: [ choose-tree, -ZsO, name ] } }
   - { mods: Command|Shift, key: R, command: { program: *TMUX, args: [ command-prompt, "rename-session -- '%%'" ] } }
   - { mods: Command, key: R, command: { program: *TMUX, args: [ command-prompt, "rename-window -- '%%'" ] } }
   #tmux: vim
