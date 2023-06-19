@@ -18,6 +18,40 @@ set-option -g   @before_current_session "#{m|r:.*\n#{session_name}\n.*\n#{client
 set-option -g   @after_current_session "#{m|r:.*\n#{client_session}\n.*\n#{session_name}\n,#{S:\n#{session_name}\n}}"
 #: }}}
 
+#: Session index {{{
+set-option -g  @session_index "#{"
+set-option -ga @session_index   "s|\n#{session_name}\n.*|\n|;"
+set-option -ga @session_index   "s|[^\n]+||;"
+set-option -ga @session_index   "s|^\n$|1|;"
+set-option -ga @session_index   "s|^\n\n$|2|;"
+set-option -ga @session_index   "s|^\n\n\n$|3|;"
+set-option -ga @session_index   "s|^\n\n\n\n$|4|;"
+set-option -ga @session_index   "s|^\n\n\n\n\n$|5|;"
+set-option -ga @session_index   "s|^\n\n\n\n\n\n$|6|;"
+set-option -ga @session_index   "s|^\n\n\n\n\n\n\n$|7|;"
+set-option -ga @session_index   "s|^\n\n\n\n\n\n\n\n$|8|;"
+set-option -ga @session_index   "s|^\n\n\n\n\n\n\n\n\n$|9|;"
+set-option -ga @session_index     ":#{S:\n#{session_name}}\n"
+set-option -ga @session_index "}"
+#: }}}
+
+#: Styled session index {{{
+set-option -wg  @session_index_fwid ""
+set-option -wga @session_index_fwid "#{"
+set-option -wga @session_index_fwid   "s|0|０|;"
+set-option -wga @session_index_fwid   "s|1|１|;"
+set-option -wga @session_index_fwid   "s|2|２|;"
+set-option -wga @session_index_fwid   "s|3|３|;"
+set-option -wga @session_index_fwid   "s|4|４|;"
+set-option -wga @session_index_fwid   "s|5|５|;"
+set-option -wga @session_index_fwid   "s|6|６|;"
+set-option -wga @session_index_fwid   "s|7|７|;"
+set-option -wga @session_index_fwid   "s|8|８|;"
+set-option -wga @session_index_fwid   "s|9|９|;"
+set-option -wga @session_index_fwid   ":#{E:@session_index}"
+set-option -wga @session_index_fwid "}"
+#: }}}
+
 #: Styled pane current path {{{
 set-option -wg  @pane_current_path ""
 set-option -wga @pane_current_path "#{?"
@@ -35,6 +69,12 @@ set-option -wga @pane_current_path_styled   "s|//|/|;"
 set-option -wga @pane_current_path_styled   "s|[^/]+$|#[bold]\\0#[nobold]|:"
 set-option -wga @pane_current_path_styled     "#{T:@pane_current_path}"
 set-option -wga @pane_current_path_styled "}"
+#: }}}
+
+#: Session index name {{{
+set-option -g   @session_index_fwid_name ""
+set-option -ga  @session_index_fwid_name "#{E:@session_index_fwid}"
+set-option -ga  @session_index_fwid_name "#{?#{m|r:^[0-9]+$,#{session_name}},,. #[bold]#{session_name}}"
 #: }}}
 
 #: Styled window index {{{
