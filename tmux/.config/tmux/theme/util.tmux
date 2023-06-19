@@ -74,7 +74,7 @@ set-option -wga @pane_current_path_styled "}"
 #: Session index name {{{
 set-option -g   @session_index_fwid_name ""
 set-option -ga  @session_index_fwid_name "#{E:@session_index_fwid}"
-set-option -ga  @session_index_fwid_name "#{?#{m|r:^[0-9]+$,#{session_name}},,. #[bold]#{session_name}}"
+set-option -ga  @session_index_fwid_name "#{?#{m|r:^[0-9]+$,#{session_name}},,. #[bold]#{session_name}#[nobold]}"
 #: }}}
 
 #: Session name by index {{{
