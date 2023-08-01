@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Diff symbol disabled</string>
+  <key>scope</key>
+  <string>source.diff meta.toc-list</string>
+  <key>settings</key>
+  <dict>
+    <key>showInIndexedSymbolList</key>
+    <integer>0</integer>
+    <key>showInSymbolList</key>
+    <integer>0</integer>
+  </dict>
+  <key>uuid</key>
+  <string>3b9280f1-392e-462c-8c9f-015d7e4d1a56</string>
+</dict>
+</plist>
