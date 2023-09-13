@@ -17,3 +17,4 @@ set-option -g @pane_status_left_symbol           ""
 set-option -g @pane_status_right_symbol          ""
 set-option -g @active_pane_status_left_symbol    ""
 set-option -g @active_pane_status_right_symbol   ""
+
