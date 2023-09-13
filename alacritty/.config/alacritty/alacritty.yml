@@ -7,7 +7,7 @@ import:
   # - ~/.config/alacritty/colors/edge_dark_aura.yml
   # - ~/.config/alacritty/colors/edge_dark_neon.yml
   # - ~/.config/alacritty/colors/edge_light.yml
-  # - ~/.config/alacritty/colors/everforest_dark_hard.yml
+  - ~/.config/alacritty/colors/everforest_dark_hard.yml
   # - ~/.config/alacritty/colors/everforest_dark_medium.yml
   # - ~/.config/alacritty/colors/everforest_dark_soft.yml
   # - ~/.config/alacritty/colors/everforest_light_hard.yml
@@ -17,7 +17,7 @@ import:
   # - ~/.config/alacritty/colors/rose-pine-moon.yml
   # - ~/.config/alacritty/colors/rose-pine.yml
   # - ~/.config/alacritty/colors/solarized_dark.yml
-  - ~/.config/alacritty/colors/solarized_light.yml
+  # - ~/.config/alacritty/colors/solarized_light.yml
   # - ~/.config/alacritty/colors/sonokai.yml
   # - ~/.config/alacritty/colors/sonokai_andromeda.yml
   # - ~/.config/alacritty/colors/sonokai_atlantis.yml
@@ -25,11 +25,18 @@ import:
   # - ~/.config/alacritty/colors/sonokai_maia.yml
   # - ~/.config/alacritty/colors/sonokai_shusia.yml
 
+cursor:
+  style:
+    shape: Block
+    blinking: Never
+  vi_mode_style:
+    shape: Block
+    blinking: Never
 window:
   decorations: none
   startup_mode: Maximized
   padding:
-    x: 2 #padding for slack sharescreen overlay border
+    x: 0 #padding for slack sharescreen overlay border
   dynamic_padding: true
 font:
   normal:
@@ -38,7 +45,7 @@ font:
   size: 15
   glyph_offset:
     #for PragmataPro font
-    y: 1
+    y: 0
 draw_bold_text_with_bright_colors: false
 selection:
   save_to_clipboard: true
@@ -86,21 +93,22 @@ key_bindings:
   - { mods: Command, key: Key7, command: { program: *TMUX, args: [ select-window, -t 7 ] } }
   - { mods: Command, key: Key8, command: { program: *TMUX, args: [ select-window, -t 8 ] } }
   - { mods: Command, key: Key9, command: { program: *TMUX, args: [ select-window, -t 9 ] } }
-  - { mods: Control, key: Key0, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_0}')" ] } }
-  - { mods: Control, key: Key1, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_1}')" ] } }
-  - { mods: Control, key: Key2, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_2}')" ] } }
-  - { mods: Control, key: Key3, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_3}')" ] } }
-  - { mods: Control, key: Key4, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_4}')" ] } }
-  - { mods: Control, key: Key5, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_5}')" ] } }
-  - { mods: Control, key: Key6, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_6}')" ] } }
-  - { mods: Control, key: Key7, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_7}')" ] } }
-  - { mods: Control, key: Key8, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_8}')" ] } }
-  - { mods: Control, key: Key9, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_9}')" ] } }
+  - { mods: Command|Shift, key: Key0, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_0}')" ] } }
+  - { mods: Command|Shift, key: Key1, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_1}')" ] } }
+  - { mods: Command|Shift, key: Key2, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_2}')" ] } }
+  - { mods: Command|Shift, key: Key3, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_3}')" ] } }
+  - { mods: Command|Shift, key: Key4, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_4}')" ] } }
+  - { mods: Command|Shift, key: Key5, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_5}')" ] } }
+  - { mods: Command|Shift, key: Key6, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_6}')" ] } }
+  - { mods: Command|Shift, key: Key7, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_7}')" ] } }
+  - { mods: Command|Shift, key: Key8, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_8}')" ] } }
+  - { mods: Command|Shift, key: Key9, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux display-message -p '#{E:@session_9}')" ] } }
   - { mods: Command, key: LBracket, command: { program: *TMUX, args: [ select-window, -p ] } }
   - { mods: Command, key: RBracket, command: { program: *TMUX, args: [ select-window, -n ] } }
   - { mods: Command|Shift, key: LBracket, command: { program: *TMUX, args: [ switch-client, -p ] } }
   - { mods: Command|Shift, key: RBracket, command: { program: *TMUX, args: [ switch-client, -n ] } }
   - { mods: Command|Control, key: F, command: { program: *TMUX, args: [ resize-pane, -Z ] } }
+  - { mods: Shift, key: Escape, command: { program: *TMUX, args: [ resize-pane, -Z ] } }
   #tmux: session manager
   - { mods: Command, key: N, command: { program: *TMUX, args: [ run-shell, "tmux switch-client -t $(tmux new-session -dP)" ] } }
   - { mods: Command|Shift, key: W, command: { program: *TMUX, args: [ kill-session ] } }

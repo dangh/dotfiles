@@ -19,7 +19,7 @@ palette:
 solarized_light: &solarized_light
   #Normal
   primary:
-    foreground: *bryellow
+    foreground: *black
     background: *brwhite
     dim_foreground: *white
   # search:
