@@ -1,0 +1,118 @@
+[
+  {
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-`": "workspace::NewCenterTerminal",
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-r": "workspace::ToggleRightDock",
+      "cmd-r": "outline::Toggle",
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+      "cmd-0": "pane::ActivateLastItem",
+      "ctrl--": "pane::SplitDown",
+      "ctrl-\\": "pane::SplitRight",
+      "cmd-_": "pane::SplitDown",
+      "cmd-|": "pane::SplitRight",
+      "ctrl-1": ["workspace::ActivatePane", 0],
+      "ctrl-2": ["workspace::ActivatePane", 1],
+      "ctrl-3": ["workspace::ActivatePane", 2],
+      "ctrl-4": ["workspace::ActivatePane", 3],
+      "ctrl-5": ["workspace::ActivatePane", 4],
+      "ctrl-6": ["workspace::ActivatePane", 5],
+      "ctrl-7": ["workspace::ActivatePane", 6],
+      "ctrl-8": ["workspace::ActivatePane", 7],
+      "ctrl-9": ["workspace::ActivatePane", 8],
+      "alt-1": ["workspace::ActivatePane", 0],
+      "alt-2": ["workspace::ActivatePane", 1],
+      "alt-3": ["workspace::ActivatePane", 2],
+      "alt-4": ["workspace::ActivatePane", 3],
+      "alt-5": ["workspace::ActivatePane", 4],
+      "alt-6": ["workspace::ActivatePane", 5],
+      "alt-7": ["workspace::ActivatePane", 6],
+      "alt-8": ["workspace::ActivatePane", 7],
+      "alt-9": ["workspace::ActivatePane", 8],
+      "cmd-ctrl-f": "workspace::ToggleZoom"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-left": "editor::MoveToPreviousSubwordStart",
+      "ctrl-right": "editor::MoveToNextSubwordEnd",
+      "ctrl-shift-left": "editor::SelectToPreviousSubwordStart",
+      "ctrl-shift-right": "editor::SelectToNextSubwordEnd",
+      "cmd-e": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-f": "editor::Tab",
+      "alt-k": "editor::SelectLargerSyntaxNode",
+      "alt-j": "editor::SelectSmallerSyntaxNode",
+      "cmd--": "zed::DecreaseBufferFontSize",
+      "cmd-+": "zed::IncreaseBufferFontSize",
+      "cmd-a": "editor::SelectLargerSyntaxNode",
+      "cmd-shift-a": "editor::SelectAll",
+      "ctrl-r": "editor::Rename",
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-f": "editor::ConfirmCompletion"
+    }
+  },
+  // {
+  //   "context": "Terminal && mode == full",
+  //   "bindings": {
+  //     "cmd-t": "workspace::NewCenterTerminal",
+  //   }
+  // },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::NewTerminal",
+      "cmd-n": "workspace::NewTerminal",
+    }
+  },
+  // {
+  //   "context": "ProjectPanel",
+  //   "bindings": {
+  //     "h": "project_panel::CollapseSelectedEntry",
+  //     "l": "project_panel::ExpandSelectedEntry",
+  //     "j": "menu::SelectNext",
+  //     "k": "menu::SelectPrev",
+  //     "o": "menu::Confirm",
+  //     "r": "project_panel::Rename",
+  //     "z c": "project_panel::CollapseSelectedEntry",
+  //     "z o": "project_panel::ExpandSelectedEntry",
+  //     "shift-o": "project_panel::RevealInFinder",
+  //     "x": "project_panel::Cut",
+  //     "c": "project_panel::Copy",
+  //     "p": "project_panel::Paste",
+  //     "d": "project_panel::Delete",
+  //     "a": "project_panel::NewFile",
+  //     "shift-a": "project_panel::NewDirectory",
+  //     "shift-y": "project_panel::CopyRelativePath",
+  //     "g y": "project_panel::CopyPath"
+  //   }
+  // }
+]
