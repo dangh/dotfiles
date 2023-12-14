@@ -1,0 +1,404 @@
+import = ["/Users/t/.config/alacritty/colors/everforest_dark_hard.toml"]
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[cursor.style]
+blinking = "Never"
+shape = "Block"
+
+[cursor.vi_mode_style]
+blinking = "Never"
+shape = "Block"
+
+[font]
+size = 15
+
+[font.glyph_offset]
+y = 0
+
+[font.normal]
+family = "PragmataPro Liga Math"
+
+[[hints.enabled]]
+command = "open"
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "None"
+
+[[hints.enabled]]
+action = "Copy"
+regex = "[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}"
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+key = "Comma"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["~/.config/alacritty/alacritty.toml"]
+program = "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+
+[[keyboard.bindings]]
+key = "Comma"
+mods = "Command|Alt"
+
+[keyboard.bindings.command]
+args = ["~/.config/tmux/tmux.conf"]
+program = "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+
+[[keyboard.bindings]]
+action = "None"
+key = "Minus"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "None"
+key = "Plus"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "None"
+key = "Equals"
+mods = "Command"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["send-keys", "-R", "C-l", ";", "clear-history"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["copy-mode;", "command-prompt", "-i", "-I", "#{pane_search_string}", "-p", "(search down)", "send -X search-forward-incremental \"%%%\""]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Backslash"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["split-window", "-h", "-c", "#{pane_current_path}"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["split-window", "-v", "-c", "#{pane_current_path}"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["new-window", "-c", "#{pane_current_path}"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["kill-window"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 0"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key1"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 1"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key2"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 2"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key3"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 3"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key4"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 4"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key5"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 5"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key6"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 6"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key7"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 7"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key8"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 8"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key9"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-t 9"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_0}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key1"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_1}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key2"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_2}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key3"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_3}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key4"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_4}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key5"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_5}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key6"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_6}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key7"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_7}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key8"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_8}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key9"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux display-message -p '#{E:@session_9}')"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "LBracket"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-p"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "RBracket"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-window", "-n"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "LBracket"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["switch-client", "-p"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "RBracket"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["switch-client", "-n"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Command|Control"
+
+[keyboard.bindings.command]
+args = ["resize-pane", "-Z"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Escape"
+mods = "Shift"
+
+[keyboard.bindings.command]
+args = ["resize-pane", "-Z"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["run-shell", "tmux switch-client -t $(tmux new-session -dP)"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["kill-session"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control"
+
+[keyboard.bindings.command]
+args = ["switch-client", "-n"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+
+[keyboard.bindings.command]
+args = ["switch-client", "-p"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "P"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["choose-tree", "-ZsO", "name"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "R"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["command-prompt", "rename-session -- '%%'"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "R"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["command-prompt", "rename-window -- '%%'"]
+program = "/opt/homebrew/bin/tmux"
+
+[[keyboard.bindings]]
+key = "P"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["send-keys", "M-p"]
+program = "/opt/homebrew/bin/tmux"
+
+[selection]
+save_to_clipboard = true
+
+[shell]
+args = ["-lc", "tmux -u new-session -As main \";\" set-option -g detach-on-destroy off"]
+program = "/bin/dash"
+
+[window]
+decorations = "none"
+dynamic_padding = true
+startup_mode = "Maximized"
+
+[window.padding]
+x = 0
