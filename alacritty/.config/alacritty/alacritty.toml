@@ -1,4 +1,4 @@
-import = ["/Users/t/.config/alacritty/colors/everforest_dark_hard.toml"]
+import = ["~/.config/alacritty/colors/everforest_dark_hard.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = false
