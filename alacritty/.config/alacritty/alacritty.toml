@@ -399,6 +399,7 @@ program = "/bin/dash"
 decorations = "none"
 dynamic_padding = true
 startup_mode = "Maximized"
+option_as_alt = "Both"
 
 [window.padding]
 x = 0
